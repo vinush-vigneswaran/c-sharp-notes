@@ -108,7 +108,7 @@ The reason the *Using* keyword is not necessary for the specific namespace ``Sys
 This can be seen by, making the pressing the *Show All Files* button in *Solution Explorer* and then go down this directory:
 > TopLevelProgram > obj > Debug > net6.0 > TopLevelProgram.GlobalUsings.g.cs
 <br>
-If you open the file `` TopLevelProgram.GlobalUsings.g.cs `` you will see all the global imports. 
+If you open the file *TopLevelProgram.GlobalUsings.g.cs* you will see all the global imports. 
 
 #### Running the new project
 
