@@ -12,6 +12,7 @@ The tutorial uses the following software and tools:
 ### Downloading Microsoft Visual Studio 2022 for Windows
 
 1. Download Microsoft Visual Studio 2022 version 17.0 or later for Windows from the following link: [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/).
+
 2. Once the installer has launched, select the following **Workloads**:
 	* ASP.NET and Web Development
 	* Azure development
@@ -19,11 +20,14 @@ The tutorial uses the following software and tools:
 	* Desktop development with C++
 	* Universal Windows Platform development
 	* Mobile development with .NET
-	*You may have to access the Workloads through the "Visual Studio Installer" > Installed tab > Modify button on Visual Studio Community 2022 card. *
+
+*You may have to access the Workloads through the "Visual Studio Installer" > Installed tab > Modify button on Visual Studio Community 2022 card.*
+
 3. On the **Indivdual components** tab, in the **Code tools** section select the following:
 	* Class Designer
 	* Git for Windows
 	* PreEmptive Protection - Dotfuscator
+
 4. Click Install, then Launch.
 
 ### Downloading Visual Studio Code
