@@ -2,14 +2,22 @@
 
 Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 
-### Pre-requisites
+### Contents
+* [00 Prerequisites](#00)
+* [01 Downloading Microsoft Visual Studio 2022 for Windows](#01)
+* [02 Downloading Visual Studio Code](#02)
+*
+* 0x Key Definitions
+---
+
+### 00 Prerequisites
 
 The tutorial uses the following software and tools:
 * Visual Studio 2022 (Installation guide below)
 * Visual Studio Code for Windows
 
 ---
-### Downloading Microsoft Visual Studio 2022 for Windows
+### 01 Downloading Microsoft Visual Studio 2022 for Windows
 
 1. Download Microsoft Visual Studio 2022 version 17.0 or later for Windows from the following link: [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/).
 
@@ -30,7 +38,7 @@ The tutorial uses the following software and tools:
 
 4. Click Install, then Launch.
 
-### Downloading Visual Studio Code
+### 02 Downloading Visual Studio Code <a name="02"></a>
 
 1. Download and install either the Stable build of Visual Studio
 Code from the following link: https://code.visualstudio.com/.
@@ -41,7 +49,7 @@ C# extension.
 3. Search for .NET Interactive Notebooks extension - download and install.
 
 ---
-### Key Definitions
+### 0x Key Definitions
 * **.NET :** A development framework used to build cross-platform applications using web, mobile and desktop apps using C#. 
 
 * The .NET was initially named ".NET Framework", and although the intention was to build a cross-platform framework, the framework heavily supported Windows applications. A more convincing cross-platform framework was developed as the ".NET Core" in 2015. It is now simply called ".NET" (2021) and is truly cross-platform supporting macOS and mobile applications. *
