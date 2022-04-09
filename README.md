@@ -102,7 +102,7 @@ What are the drawbacks?
 4. Press ``Program.cs`` in the *Solutions Explorer* to see the Source Code file(.cs).
 5. You may have noticed the ``Program.cs`` for ``TopLevelProgram`` does not have *namespace, Main method* or *Program class*. But if this is in the format of top-level program where is the *Using* keyword? (see section below)
 
-##### Implicitly imported namespaces
+#### Implicitly imported namespaces
 The reason the *Using* keyword is not necessary for the specific namespace ``System`` is because it is automatically imported as a global import.
 <br>
 This can be seen by, making the pressing the *Show All Files* button in *Solution Explorer* and then go down this directory:
@@ -110,7 +110,7 @@ This can be seen by, making the pressing the *Show All Files* button in *Solutio
 <br>
 If you open the file ``TopLevelProgram.GlobalUsings.g.cs`` you will see all the global imports. 
 
-##### Running the new project
+#### Running the new project
 
 Let's change some settings to easily run new projects:
 
@@ -118,7 +118,7 @@ Let's change some settings to easily run new projects:
 
 Now simply press on the desired project ``TopLevelProgram`` and then navigate to:
 
-> *Debug > Start Without Debugging*
+> *Debug* (top ribbon) > *Start Without Debugging*
 
 
 
