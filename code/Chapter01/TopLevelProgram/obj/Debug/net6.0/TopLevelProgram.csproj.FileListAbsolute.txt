@@ -1,0 +1,15 @@
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\bin\Debug\net6.0\TopLevelProgram.exe
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\bin\Debug\net6.0\TopLevelProgram.deps.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\bin\Debug\net6.0\TopLevelProgram.runtimeconfig.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\bin\Debug\net6.0\TopLevelProgram.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\bin\Debug\net6.0\TopLevelProgram.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\obj\Debug\net6.0\TopLevelProgram.csproj.AssemblyReference.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\obj\Debug\net6.0\TopLevelProgram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\obj\Debug\net6.0\TopLevelProgram.AssemblyInfoInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\obj\Debug\net6.0\TopLevelProgram.AssemblyInfo.cs
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\obj\Debug\net6.0\TopLevelProgram.csproj.CoreCompileInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\obj\Debug\net6.0\TopLevelProgram.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\obj\Debug\net6.0\refint\TopLevelProgram.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\obj\Debug\net6.0\TopLevelProgram.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\obj\Debug\net6.0\TopLevelProgram.genruntimeconfig.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\TopLevelProgram\obj\Debug\net6.0\ref\TopLevelProgram.dll

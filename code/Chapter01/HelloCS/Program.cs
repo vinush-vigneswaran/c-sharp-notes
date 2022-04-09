@@ -1,2 +1,12 @@
 ﻿using System;
-Console.WriteLine("Hello World!");
+
+namespace HelloCS
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, C#!");
+        }
+    }
+}

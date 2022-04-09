@@ -87,15 +87,38 @@ Console.WriteLine("Hello World!");
 ```
 Why does this work?
 
-* The boilerplate code to define a namespace, Program class, and its Main method is generated and wrapped around the statement above.
+* During compilation: the boilerplate code to define a *namespace*, *Program class*, and its *Main method* is generated and wrapped around the statement above.
 
 What are the drawbacks?
 
 * You can only have one file like this.
 * Only works for C# 9 or later.
-* "Using" keyword still has to be at the top.
+* "Using" still has to be at the top.
 
+#### Adding new project
+1. Navigate to File > Add > New Project
+2. Save file to same solution "Chapter01" as ``TopLevelProgram``
+3. You can have different .NET framework versions in the same project (i.e. .NET 6.0)
+4. Press ``Program.cs`` in the *Solutions Explorer* to see the Source Code file(.cs).
+5. You may have noticed the ``Program.cs`` for ``TopLevelProgram`` does not have *namespace, Main method* or *Program class*. But if this is in the format of top-level program where is the *Using* keyword? (see section below)
 
+##### Implicitly imported namespaces
+The reason the *Using* keyword is not necessary for the specific namespace ``System`` is because it is automatically imported as a global import.
+<br>
+This can be seen by, making the pressing the *Show All Files* button in *Solution Explorer* and then go down this directory:
+> TopLevelProgram > obj > Debug > net6.0 > TopLevelProgram.GlobalUsings.g.cs
+<br>
+If you open the file ``TopLevelProgram.GlobalUsings.g.cs`` you will see all the global imports. 
+
+##### Running the new project
+
+Let's change some settings to easily run new projects:
+
+> *Solution Explorer* > right-click *Chapter01 solution* > select *Set Startup Projects* > change to *Current selection* > Press OK.
+
+Now simply press on the desired project ``TopLevelProgram`` and then navigate to:
+
+> *Debug > Start Without Debugging*
 
 
 
