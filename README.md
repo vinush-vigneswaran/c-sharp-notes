@@ -104,7 +104,7 @@ What are the drawbacks?
 
 #### Implicitly imported namespaces
 The reason the *Using* keyword is not necessary for the specific namespace ``System`` is because it is automatically imported as a global import.
-<br>
+<br><br>
 This can be seen by, making the pressing the *Show All Files* button in *Solution Explorer* and then go down this directory:
 > TopLevelProgram > obj > Debug > net6.0 > TopLevelProgram.GlobalUsings.g.cs
 <br>
