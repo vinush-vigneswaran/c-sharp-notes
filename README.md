@@ -1,6 +1,6 @@
 # C# 10 and .NET 6 
 
-This is a repository for notes on C# learning progress. These notes are made from the textbook "C# 10 and .NET 6" by  Mark J. Price
+Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 
 ### Pre-requisites
 
