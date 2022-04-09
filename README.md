@@ -1,4 +1,4 @@
-# C# 10 and .NET 6 Cheat Sheet
+# C# 10 and .NET 6 
 
 This is a repository for notes on C# learning progress. These notes are made from the textbook "C# 10 and .NET 6" by  Mark J. Price
 
@@ -40,7 +40,8 @@ C# extension.
 ### Key Definitions
 * **.NET :** A development framework used to build cross-platform applications using web, mobile and desktop apps using C#. 
 
-The .NET was initially named ".NET Framework", and although the intention was to build a cross-platform framework, the framework heavily supported Windows applications. A more convincing cross-platform framework was developed as the ".NET Core" in 2015. It is now simply called ".NET" (2021) and is truly cross-platform supporting macOS and mobile applications.
+* The .NET was initially named ".NET Framework", and although the intention was to build a cross-platform framework, the framework heavily supported Windows applications. A more convincing cross-platform framework was developed as the ".NET Core" in 2015. It is now simply called ".NET" (2021) and is truly cross-platform supporting macOS and mobile applications. *
+
 * **Namespace :** A declarative region that provides a scope to the 
 identifiers inside it (the names of types, functions, variables, etc.).
 * **Identifers :** Variable or object name
