@@ -7,7 +7,7 @@ Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 * [01 - Downloading Microsoft Visual Studio 2022 for Windows](#01)
 * [02 - Downloading Visual Studio Code](#02)
 *
-* [0x Key Definitions](#0x)
+* [0x - Key Definitions](#0x)
 ---
 <a name="00"></a>
 ### 00 - Prerequisites
@@ -58,7 +58,7 @@ C# extension.
 
 * **.NET :** A development framework used to build cross-platform applications using web, mobile and desktop apps using C#. 
 
-* The .NET was initially named ".NET Framework", and although the intention was to build a cross-platform framework, the framework heavily supported Windows applications. A more convincing cross-platform framework was developed as the ".NET Core" in 2015. It is now simply called ".NET" (2021) and is truly cross-platform supporting macOS and mobile applications. *
+*The .NET was initially named ".NET Framework", and although the intention was to build a cross-platform framework, the framework heavily supported Windows applications. A more convincing cross-platform framework was developed as the ".NET Core" in 2015. It is now simply called ".NET" (2021) and is truly cross-platform supporting macOS and mobile applications.*
 
 * **Namespace :** A declarative region that provides a scope to the 
 identifiers inside it (the names of types, functions, variables, etc.).
