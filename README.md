@@ -9,17 +9,17 @@ Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 *
 * [0x Key Definitions](#0x)
 ---
-
-### 00 Prerequisites
 <a name="00"></a>
+### 00 Prerequisites
+
 
 The tutorial uses the following software and tools:
 * Visual Studio 2022 (Installation guide below)
 * Visual Studio Code for Windows
 
 ---
-### 01 Downloading Microsoft Visual Studio 2022 for Windows
 <a name="01"></a>
+### 01 Downloading Microsoft Visual Studio 2022 for Windows
 
 
 1. Download Microsoft Visual Studio 2022 version 17.0 or later for Windows from the following link: [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/).
@@ -41,8 +41,8 @@ The tutorial uses the following software and tools:
 
 4. Click Install, then Launch.
 
-### 02 Downloading Visual Studio Code 
 <a name="02"></a>
+### 02 Downloading Visual Studio Code 
 
 1. Download and install either the Stable build of Visual Studio
 Code from the following link: https://code.visualstudio.com/.
