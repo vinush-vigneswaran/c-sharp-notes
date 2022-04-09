@@ -80,17 +80,23 @@ namespace HelloCS
 }
 
 ```
-to simply this:
+to this:
 ```C#
 using System;
 Console.WriteLine("Hello World!");
 ```
-* Why does this work?
-	> The boilerplate code to define a namespace, Program class, and its Main method is generated and wrapped around the statement above.
-* What are the drawbacks?
-	> * You can only have one file like this.
-	> Only works for C# 9 or later.
-	> "Using" keyword still has to be at the top.
+<details>
+<summary>Why does this work?</summary>
+<br>
+* The boilerplate code to define a namespace, Program class, and its Main method is generated and wrapped around the statement above.
+
+<summary>What are the drawbacks?</summary>
+<br>
+* You can only have one file like this.
+* Only works for C# 9 or later.
+* "Using" keyword still has to be at the top.
+</details>
+
 
 
 
@@ -174,8 +180,3 @@ using  System;
 Console.WriteLine("Hello World!");
 ```
 
-<details>
-<summary>How do I dropdown?</summary>
-<br>
-This is how you dropdown.
-</details>
