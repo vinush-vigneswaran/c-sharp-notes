@@ -39,7 +39,7 @@ The tutorial uses the following software and tools:
 4. Click Install, then Launch.
 
 ### 02 - Downloading Visual Studio Code (Optional)
-This part is not necessary if you are going to just use Visual Studio 2022 to follow this guide. However, if you prefer to use Visual Studio to follow along then please install the extensions in steps 2-5 below:
+This part is not necessary if you are going to just use Visual Studio 2022 to follow this guide. However, if you prefer to use Visual Studio Code to follow along then please install the extensions in steps 2-5 below:
 
 1. Download and install either the Stable build of Visual Studio
 Code from the following link: https://code.visualstudio.com/.
@@ -53,11 +53,14 @@ C# extension.
 <a name="02"></a>
 ### 03 - Building Console Apps (Book Chapter 1)
 
+#### Printing "Hello, C\#"  
 1. Create a **new project** using a **Console Application**
 2. Name your project (e.g. "HelloCS") and choose a location. Solutions allow you to create and manage multiple projects - for "Solution name" you can put Chapter01 (or Project01)
 3. Pick framework .NET 5.0 (we will use the older version for now). If it is not available in the drop down menu follow the instructions below:
 
  	> Visual Studio Installer (through Windows start menu) > MS Visual Studio 2022 > Modify > Individual Components > Tick .NET 5.0 Runtime > Restart Visual Studio and go to step 1.
+
+ 4. Modify the relevant line to print "Hello, C#!"
 
 
 
@@ -82,6 +85,7 @@ C# extension.
 <a name="0x"></a>
 ### 0x - Key Definitions
 
+#### .NET 
 * **.NET :** A development framework used to build cross-platform applications using web, mobile and desktop apps using C#. 
 
 *The .NET was initially named ".NET Framework", and although the intention was to build a cross-platform framework, the framework heavily supported Windows applications. A more convincing cross-platform framework was developed as the ".NET Core" in 2015. It is now simply called ".NET" (2021) and is truly cross-platform supporting macOS and mobile applications.*
@@ -96,6 +100,53 @@ identifiers inside it (the names of types, functions, variables, etc.).
 * **Assembly (in .NET) :** 
 Assemblies are compiled code library used for deployment, versioning and security. Assemblies take the form of .exe or .dll files and are the building blocks of .NET applications. They provide a Common Language Runtime (CLR). At the compilation stage MicroSoft can provide CLRs for Linux and macOS. This means at the second compilation stage would read a common IL (using CLR) to generate code for the native OS and CPU instruction set. Process: **c# -> IL -> processed by CLR just-in-time -> Native Machine Code**
 
+#### OOPs and Keywords
+
+* **Class :** A template definition of the methods and variables common to all objects of one type. E.g. the blueprint for a car.
+
+* **Object :** An object is a particular instance of a class - it has a state (data) and behaviour (method). E.g. a particular car like VW Polo with your number plate.
+
+* **Method :** An action the object can perform E.g. drive the car
+
+* **Constructor :** This instantiates the object by forcing set default values. There can be many constructors. The constructor has no return type.
+
+* **Instance Variables :** These are declared inside a class but outside the method, with an access modifier of "public". This is used to instantiate the object, with some attributes.
+
+* **Access Modifiers :** These help implement "encapsulation" - i.e. information hiding. **Private** - only the current class will have access to the field or methods. **Public** - any class can rfer to the field or call the method. **Protected** - Only the current class and sub-classes have access to the field or methods.
+
+* **Static :** This mean the method is associated with the class, and not a specific instance (object) of that class. Thus, you can call a static method without creating an instance of that class. Basically you use it as a function, without creating an object.
+
+* **Void :** Mean there is no return value to this method
+
+* **Scope :** Class scope defines the accessibility or visibility of class variables/functions.
+
+* **Namespace :** These are used to organise classes. For example:
+```C#
+System.Console.WriteLine("Hello World!");
+```
+"System" is the namespace, "Console" is a class and "WriteLine" is a method.
+You can also control the scope of your class using a namespace.
+```C#
+namespace SampleNamespace
+{
+    class SampleClass
+    {
+        public void SampleMethod()
+        {
+            System.Console.WriteLine(
+                "SampleMethod inside SampleNamespace");
+        }
+    }
+}
+```
+Namespace have implicitly public access and that is not modifiable.
+
+* **Using :** The "using" keyword removes the need for the namespace to be used. For example:
+```C#
+Using  System;
+// The line below doesn't need to have "System" anymore
+Console.WriteLine("Hello World!");
+```
 
 <details>
 <summary>How do I dropdown?</summary>
