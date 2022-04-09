@@ -87,16 +87,10 @@ identifiers inside it (the names of types, functions, variables, etc.).
 * **Identifers :** Variable or object name
 * **Long Term Support releases :** LTS applications are stable and have fewer updates, hence it is a better choice for applications that you do not intend to update frequently.
 * **Current releases :** These releases are continuously improved based on feedback, and therefore this is a good choice if you are actively devlopping, as your application would be optimised with the latest improvements. However, if your project is not updated and maintained, features may not be supported anymore.
-* **Roslyn :** This is the C# compiler used by dotnet CLI tool, which converts C# source code to IL (intermdeiate language) code and stores the IL in an assembly (a DLL or EXE file). IL code statements are like assembly language instructions, which are executed by CoreCLR (.NET's virtual machine). At runtime, CoreCLR loads IL code from the assembly just-in-time compiler compiles to CPU instructions and executed.
-<br>
-c# -> IL -> processed by CLR just-in-time -> Native Machine Code
+* **Roslyn :** This is the C# compiler used by dotnet CLI tool, which converts C# source code to IL (intermdeiate language) code and stores the IL in an assembly (a DLL or EXE file). IL code statements are like assembly language instructions, which are executed by CoreCLR (.NET's virtual machine). At runtime, CoreCLR loads IL code from the assembly just-in-time compiler compiles to CPU instructions and executed. Process: **c# -> IL -> processed by CLR just-in-time -> Native Machine Code**
 
 * **Assembly (in .NET) :** 
-Assemblies are compiled code library used for deployment, versioning and security. Assemblies take the form of .exe or .dll files and are the building blocks of .NET applications. They provide a Common Language Runtime (CLR).
-<br>
-At the compilation stage MicroSoft can provide CLRs for Linux and macOS. This means at the second compilation stage would read a common IL (using CLR) to generate code for the native OS and CPU instruction set.
-<br>
-c# -> IL -> processed by CLR just-in-time -> Native Machine Code
+Assemblies are compiled code library used for deployment, versioning and security. Assemblies take the form of .exe or .dll files and are the building blocks of .NET applications. They provide a Common Language Runtime (CLR). At the compilation stage MicroSoft can provide CLRs for Linux and macOS. This means at the second compilation stage would read a common IL (using CLR) to generate code for the native OS and CPU instruction set. Process: **c# -> IL -> processed by CLR just-in-time -> Native Machine Code**
 
 
 <details>
