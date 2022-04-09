@@ -53,7 +53,7 @@ C# extension.
 <a name="02"></a>
 ### 02 - Building Console Apps (Book Chapter 1)
 
-#### Printing "Hello, C\#"  
+#### 2.1 - Printing "Hello, C\#"  
 1. Create a **new project** using a **Console Application**
 2. Name your project (e.g. "HelloCS") and choose a location. Solutions allow you to create and manage multiple projects - for "Solution name" you can put Chapter01 (or Project01)
 3. Pick framework .NET 5.0 (we will use the older version for now). If it is not available in the drop down menu follow the instructions below:
@@ -63,7 +63,7 @@ C# extension.
  4. Modify the relevant line to print "Hello, C#!"
  5. Run the code by going to "Debug" > "Start without Debugging"
 
-#### Top-level Programming 
+#### 2.2 - Top-level Programming 
 We can condense the template code from: 
 ```C#
 using System;
@@ -95,14 +95,14 @@ What are the drawbacks?
 * Only works for C# 9 or later.
 * "Using" still has to be at the top.
 
-#### Adding new project
+#### 2.3 - Adding new project
 1. Navigate to File > Add > New Project
 2. Save file to same solution "Chapter01" as ``TopLevelProgram``
 3. You can have different .NET framework versions in the same project (i.e. .NET 6.0)
 4. Press ``Program.cs`` in the *Solutions Explorer* to see the Source Code file(.cs).
 5. You may have noticed the ``Program.cs`` for ``TopLevelProgram`` does not have *namespace, Main method* or *Program class*. But if this is in the format of top-level program where is the *Using* keyword? (see section below)
 
-#### Implicitly imported namespaces
+#### 2.4 - Implicitly imported namespaces
 The reason the *Using* keyword is not necessary for the specific namespace ``System`` is because it is automatically imported as a global import.
 <br><br>
 This can be seen by, making the pressing the *Show All Files* button in *Solution Explorer* and then go down this directory:
@@ -110,7 +110,7 @@ This can be seen by, making the pressing the *Show All Files* button in *Solutio
 <br>
 If you open the file *TopLevelProgram.GlobalUsings.g.cs* you will see all the global imports. 
 
-#### Running the new project
+#### 2.5 - Running the new project
 
 Let's change some settings to easily run new projects:
 
