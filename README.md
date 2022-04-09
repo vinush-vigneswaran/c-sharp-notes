@@ -5,7 +5,7 @@ Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 ### Contents
 * [00 - Prerequisites](#00)
 * [01 - Downloading Microsoft Visual Studio 2022 for Windows](#01)
-* [02 - Downloading Visual Studio Code](#02)
+* [02 - Building Console Apps (Book Chapter 1)](#02)
 *
 * [0x - Key Definitions](#0x)
 ---
@@ -38,7 +38,7 @@ The tutorial uses the following software and tools:
 
 4. Click Install, then Launch.
 
-### 02 - Downloading Visual Studio Code (Optional)
+### (Optional) Downloading Visual Studio Code Instead
 This part is not necessary if you are going to just use Visual Studio 2022 to follow this guide. However, if you prefer to use Visual Studio Code to follow along then please install the extensions in steps 2-5 below:
 
 1. Download and install either the Stable build of Visual Studio
@@ -51,7 +51,7 @@ C# extension.
 
 ---
 <a name="02"></a>
-### 03 - Building Console Apps (Book Chapter 1)
+### 02 - Building Console Apps (Book Chapter 1)
 
 #### Printing "Hello, C\#"  
 1. Create a **new project** using a **Console Application**
@@ -61,10 +61,36 @@ C# extension.
  	> Visual Studio Installer (through Windows start menu) > MS Visual Studio 2022 > Modify > Individual Components > Tick .NET 5.0 Runtime > Restart Visual Studio and go to step 1.
 
  4. Modify the relevant line to print "Hello, C#!"
+ 5. Run the code by going to "Debug" > "Start without Debugging"
 
+#### Top-level Programming 
+We can condense the template code from: 
+```C#
+using System;
 
+namespace HelloCS
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello, C#!");
+        }
+    }
+}
 
-
+```
+to simply this:
+```C#
+using System;
+Console.WriteLine("Hello World!");
+```
+* Why does this work?
+	> The boilerplate code to define a namespace, Program class, and its Main method is generated and wrapped around the statement above.
+* What are the drawbacks?
+	> * You can only have one file like this.
+	> Only works for C# 9 or later.
+	> "Using" keyword still has to be at the top.
 
 
 
@@ -143,7 +169,7 @@ Namespace have implicitly public access and that is not modifiable.
 
 * **Using :** The "using" keyword removes the need for the namespace to be used. For example:
 ```C#
-Using  System;
+using  System;
 // The line below doesn't need to have "System" anymore
 Console.WriteLine("Hello World!");
 ```

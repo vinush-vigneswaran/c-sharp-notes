@@ -1,0 +1,16 @@
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\bin\Debug\net5.0\HelloCS.exe
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\bin\Debug\net5.0\HelloCS.deps.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\bin\Debug\net5.0\HelloCS.runtimeconfig.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\bin\Debug\net5.0\HelloCS.runtimeconfig.dev.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\bin\Debug\net5.0\HelloCS.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\bin\Debug\net5.0\HelloCS.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\obj\Debug\net5.0\HelloCS.csproj.AssemblyReference.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\obj\Debug\net5.0\HelloCS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\obj\Debug\net5.0\HelloCS.AssemblyInfoInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\obj\Debug\net5.0\HelloCS.AssemblyInfo.cs
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\obj\Debug\net5.0\HelloCS.csproj.CoreCompileInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\obj\Debug\net5.0\HelloCS.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\obj\Debug\net5.0\refint\HelloCS.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\obj\Debug\net5.0\HelloCS.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\obj\Debug\net5.0\HelloCS.genruntimeconfig.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter01\HelloCS\obj\Debug\net5.0\ref\HelloCS.dll
