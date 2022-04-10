@@ -6,7 +6,13 @@ Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 * [00 - Prerequisites](#00)
 * [01 - Downloading Microsoft Visual Studio 2022 for Windows](#01)
 * [02 - Building Console Apps (Book Chapter 1)](#02)
-*
+	* [2.1 - Printing "Hello, C](#02.1)
+    * [2.2 - Top-level Programming](#02.2)
+    * [2.3 - Adding new project](#02.3)
+    * [2.4 - Implicitly imported namespaces](#02.4)
+    * [2.5 - Running the new project](#02.5)
+
+
 * [0x - Key Definitions](#0x)
 ---
 <a name="00"></a>
@@ -53,6 +59,7 @@ C# extension.
 <a name="02"></a>
 ### 02 - Building Console Apps (Book Chapter 1)
 
+<a name="02.1"></a>
 #### 2.1 - Printing "Hello, C\#"  
 1. Create a **new project** using a **Console Application**
 2. Name your project (e.g. "HelloCS") and choose a location. Solutions allow you to create and manage multiple projects - for "Solution name" you can put Chapter01 (or Project01)
@@ -63,6 +70,7 @@ C# extension.
  4. Modify the relevant line to print "Hello, C#!"
  5. Run the code by going to "Debug" > "Start without Debugging"
 
+<a name="02.2"></a>
 #### 2.2 - Top-level Programming 
 We can condense the template code from: 
 ```C#
