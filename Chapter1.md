@@ -132,7 +132,7 @@ Code: static void main(string[] args).
 <br>
 A top-level-program is a project that does no explicitly need to mention namespace, program class and main method. These are implicitly defined for you to be able to type code without boiler-plate wrapper code.
 <br><br>
-To access command-line arguments in this case, you can use a parameter named "args"  - this is part of the behind the scene wrapper code for command-line arguments.
+To access command-line arguments in this case, you can use the parameter named "args" by default - this is part of the behind the scene wrapper code for command-line arguments.
 <br><br></details>
 
 <details>
