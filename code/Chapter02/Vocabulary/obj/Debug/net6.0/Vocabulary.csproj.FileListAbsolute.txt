@@ -1,0 +1,5 @@
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.csproj.AssemblyReference.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.AssemblyInfoInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.AssemblyInfo.cs
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.csproj.CoreCompileInputs.cache

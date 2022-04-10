@@ -142,6 +142,58 @@ using  System;
 // The line below doesn't need to have "System" anymore
 Console.WriteLine("Hello World!");
 ```
+* **Statically typed language :** Is when the variable types are known at compile time (Java, C, C++, Go). Although, other languages offer a form of *type inference* where the type system deduce the type of variables (OCalm, Haskell, Scala, Kotlin). The type-check is done at compilation.
+<br><br>
+If we run this (Go):
+```Go
+package main
+
+import ("fmt"
+)
+
+func silly(a int) {
+    if (a > 0) {
+        fmt.Println("Hi")
+    } else {
+        fmt.Println("3" + 5)
+    }
+}
+
+func main() {
+    silly(2)
+}
+```
+Then, we get the error:
+```
+invalid operation: "3" + 5 (mismatched types string and int)
+```
+This error is produced, even though the function argument only checks the if-statement (and not the else-statement). This is because the type-check is done at compilation, and it checks all the code for type mismatch.
+
+* **Dynamically typed languages :** It is not required for the variable type to be specified (Perl, Ruby, Python, etc.). You can still provide type information - but this is not mandatory. 
+<br><br>
+Type-check is done at run-time (Python):
+```Python
+def silly(a):
+    if a > 0:
+        print 'Hi'
+    else:
+        print 5 + '3'
+```
+Therefore this line runs perfectly fine:
+```
+silly(2)
+```
+Error is only raised if a problematic line is run:
+```
+silly(-1)
+```
+Outputs:
+```
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+So bugs can easily go unnoticed (compared to statically-typed) unless tested properly.
+
+
 #### C# and Visual Studio Code -specific Tips
 
 * **Go to definition :** This allows you to see the public definition of the type or member. For example you can look at the underlying code for ``int``. Declare an integer in the main class then:

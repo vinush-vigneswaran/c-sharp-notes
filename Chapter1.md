@@ -9,6 +9,9 @@ Return [Home](README.md)
 * [1.4 - Implicitly imported namespaces](#01.4)
 * [1.5 - Running the new project](#01.5)
 * [1.6 - Question & Answer](#01.6)
+
+The code for this section can be found in ``code/Chapter01``
+
 ---
 <a name="01.1"></a>
 ### 1.1 - Printing "Hello, C\#"  
