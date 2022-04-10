@@ -10,7 +10,7 @@ Return [Home](README.md)
 * [1.5 - Running the new project](#01.5)
 * [1.6 - Question & Answer](#01.6)
 ---
-<a name="02.1"></a>
+<a name="01.1"></a>
 ### 1.1 - Printing "Hello, C\#"  
 1. Create a **new project** using a **Console Application**
 2. Name your project (e.g. "HelloCS") and choose a location. Solutions allow you to create and manage multiple projects - for "Solution name" you can put Chapter01 (or Project01)
@@ -22,7 +22,7 @@ Return [Home](README.md)
  5. Run the code by going to "Debug" > "Start without Debugging"
 
 ---
-<a name="02.2"></a>
+<a name="01.2"></a>
 ### 1.2 - Top-level Programming 
 We can condense the template code from: 
 ```C#
