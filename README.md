@@ -172,6 +172,33 @@ Assemblies are compiled code library used for deployment, versioning and securit
 
 * **Void :** Mean there is no return value to this method
 
+* **main(String args[]) :** The main method is the entry point for program.
+``String args[]``  takes in a String as an argument when used in Java/C# command line. For exampe in Java:
+```Java
+public class Test {
+
+public static void main(String[] args){
+
+    for(String s : args){
+	System.out.println(s);
+    }
+	
+    }
+}
+```
+Thus, this can be used in the CLI by:
+```
+$ javac Test.java 
+$ java Test 1 2 3
+1
+2
+3
+$ java Test "Hello World" "Tom Hanks"
+Hello World
+Tom Hanks
+```
+
+
 * **Scope :** Class scope defines the accessibility or visibility of class variables/functions.
 
 * **Namespace :** These are used to organise classes. For example:
