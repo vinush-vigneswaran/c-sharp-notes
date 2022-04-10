@@ -33,28 +33,59 @@ dotnet --version
 ---
 <a name="02.2"></a>
 ### 2.2 - C\# Vocabulary
-* **New project :** Create a new console app project:
-    * Project name: *Vocabulary*
-    * Location: ``...\code``
-    * Solution name: *Chapter02*
 
-    > Remember that the solution name puts the project into a nice package.
-* **Compiler and Language Version :** Add ``#error version`` above the print line, and run code. This will show the version as an error (check Error List)
+#### **New project** 
+Create a new console app project:
+* Project name: *Vocabulary*
+* Location: ``...\code``
+* Solution name: *Chapter02*
 
-* **Compiler and Language Version :** Add ``#error version`` above the print line, and run code. This will show the version as an error (check Error List)
+> Remember that the solution name puts the project into a nice package.
+#### **Compiler and Language Version** 
+* Add ``#error version`` above the print line, and run code. This will show the version as an error (check Error List)
 
-* **Using :** The ``using System;`` keyword points to the namespace for types. If the namespace hasn't been prefixed to the types as such: ``System.Console.Writeline("...")``, then the compiler looks for the "Using" keyword.
-* **Types :** C# provides a standard set of built-in types. These represent integers, floating point values, Boolean expressions, text characters, decimal values, and other types of data. There are also built-in string and object types. You use the struct, class, interface, enum, and record constructs to create your own custom types.
-* **Global namespaces :** You can set your own global namespaces which will be used accross your projects and classes as:
+#### **Using** 
+* The ``using System;`` keyword points to the namespace for types. If the namespace hasn't been prefixed to the types as such: ``System.Console.Writeline("...")``, then the compiler looks for the "Using" keyword.
+
+#### **Types** 
+* C# provides a standard set of built-in types. These represent integers, floating point values, Boolean expressions, text characters, decimal values, and other types of data. There are also built-in string and object types. You use the struct, class, interface, enum, and record constructs to create your own custom types.
+
+#### **Global namespaces** 
+* You can set your own global namespaces which will be used accross your projects and classes as:
 ```C#
 global using System;
 global using System.Linq;
 global using System.Collections.Generic;
 ```
+* Recommended to use a seperate C# file for just global imports named *GlobalUsings.cs*. 
 
-    > Recommended to use a seperate C# file for just global imports named ``GlobalUsings.cs``
+* The C#10 compiler automatically generates a .cs file for global imports in the *obj* folder. We can control these implicit imports by altering the ``.cdproj`` file:
+    1. Go to *Solutions Explorer* > Select *Vocabulary Project* > *toggle Show All files* > select *obj* folder in the directory > *debug* > *net6.0*.
+    2. Examine the ``Vocabulary.GlobalUsings.g.cs`` file. These are implictly imported global namespaces. 
+    3. Let's change what namespaces are implicitly imported. Close the ``Vocabulary.GlobalUsings.g.cs`` file.
+    4. We will remove the "System.Treading" namespaces and add "System.Numeric". Now press on *Vocabulary* project (.csproj) and add the following:
+```C#
+<Project Sdk="Microsoft.NET.Sdk">
 
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
 
+    <ItemGroup>
+        <Using Remove="System.Threading" />
+        <Using Include="System.Numerics" />
+    </ItemGroup>
+
+</Project>
+```
+<br>
+    
+    5. Save changes, check ``Vocabulary.GlobalUsings.g.cs`` file again to see if the changes have been applied.
+
+#### **Methods**
 
 
 
