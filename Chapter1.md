@@ -92,68 +92,63 @@ Now simply press on the desired project ``TopLevelProgram`` and then navigate to
 <br>
 
 <details>
-<summary>1. Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<summary><b>1. Is Visual Studio 2022 better than Visual Studio Code?</b></summary>
 <br>
-No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+No, depends on the task. Visual Studio 2022 is heavier but can create applications with GUI. VS Code is much lighter and code-focussed. 
 <br><br></details>
 
 <details>
-<summary>2. Is .NET 6 better than .NET Framework?</summary>
+<summary><b>2. Is .NET 6 better than .NET Framework?</b></summary>
 <br>
-Yes .NET6 is cross-platform compatible with a unified framework
-</details>
-
-<details>
-<summary>3. What is .NET Standard and why is it still important?</summary>
-<br>
-.NET Standard is a specification which tells you which APIs are require for you version of .NET – essentially what will work and will not. This is important for legacy .NET frameworks to figure out the limits of their applications?
-</details>
-
-<details>
-<summary>4. Why can a programmer use different languages, for example, C# and F#, to write applications that run on .NET?</summary>
-<br>
-C# and F# is compiled to an Intermediate Language file (.exe or .dll) using Roslyn the compiler– this can be run on any native computer using the CLR (common-language runtime)
-<br><br></details>
-
-
-<details>
-<summary>5. What is the name of the entry point method of a .NET console application and how should it be declared?</summary>
-<br>
-Main method -
+Yes for modern development. .NET6 is cross-platform compatible and performance-oriented version of the legacy .NET Framework.
 <br><br></details>
 
 <details>
-<summary>6. What is a top-level program and how do you access any command-line arguments?</summary>
+<summary><b>3. What is .NET Standard and why is it still important?</b></summary>
 <br>
-No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+.NET Standard defines an API that a .NET platform can implement.
+<br><br>
+For example .NET framework, Xamarin and modern .NET implements ".NET Standards 2.0".
+<br><br>
+However, for .NET Core 3.0 there is a newer version ".NET Standards 2.1", which will have some features not supported by .NET Framework (legacy version). Therefore, if you will be doing parts of your project with the legacy version, then for you new class library to support all .NET platforms it needs to be ".NET Standards 2.0-compatible".
 <br><br></details>
 
 <details>
-<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<summary><b>4. Why can a programmer use different languages, for example, C# and F#, to write applications that run on .NET?</b></summary>
 <br>
-No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+C#, F# and Viual Baics languages are compiled to an Intermediate Language file (.exe or .dll) using different compilers (such as Roslyn for C#). IL is then compiled to native CPU instructions using CLR (common language runtime) at run-time.
 <br><br></details>
 
 <details>
-<summary>7. What do you type at the prompt to build and execute C# source code?</summary>
+<summary><b>5. What is the name of the entry point method of a .NET console application and how should it be declared?</b></summary>
 <br>
-No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+Main method - it should be declared with void (since this method doesn't need to return anything). It should have an access mofifier of public, so that the compiler can find the method - for C# this is covered by the namespace keyword. The static keyword is used to associate the method to the class rather than an object (removes the need to instantiate an object to use the method). Optionally, we can have a string array as command-line arguments, and return int (rather than void).
+<br><br>
+Code: static void main(string[] args).
 <br><br></details>
 
 <details>
-<summary>8. What are some benefits of using .NET Interactive Notebooks to write C# code?</summary>
+<summary><b>6. What is a top-level program and how do you access any command-line arguments?</b></summary>
 <br>
-No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+A top-level-program is a project that does no explicitly need to mention namespace, program class and main method. These are implicitly defined for you to be able to type code without boiler-plate wrapper code.
+<br><br>
+To access command-line arguments in this case, you can use a parameter named "args"  - this is part of the behind the scene wrapper code for command-line arguments.
 <br><br></details>
 
 <details>
-<summary>9. Where would you look for help for a C# keyword?</summary>
+<summary><b>7. What do you type at the prompt to build and execute C# source code?</b></summary>
 <br>
-No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+Within a folder which contains ".csproj file" you can enter "dotnet run".
 <br><br></details>
 
 <details>
-<summary>10. Where would you look for solutions to common programming problems?</summary>
+<summary><b>8. What are some benefits of using .NET Interactive Notebooks to write C# code?</b></summary>
 <br>
-No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+You can modularise the code, and see what the output would be for a function or script really easily. You can mix different languages in the same document. Also, can use markdown.
+<br><br></details>
+
+<details>
+<summary><b>9. Where would you look for help for a C# keyword?</b></summary>
+<br>
+Microsoft's official C# documentation, or the "Go to definition" section in Visual Studio Code.
 <br><br></details>

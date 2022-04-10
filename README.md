@@ -11,6 +11,10 @@ Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 
 ---
 <a name="01"></a>
+### Getting Started Quickly
+
+If you want to just mess around with code staight away without downloading software, then use this link: https://dotnetfiddle.net/.
+
 ### Downloading Microsoft Visual Studio 2022 for Windows
 
 In the notes and projects, I use Microsoft Visual Studio 2022:
