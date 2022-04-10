@@ -3,27 +3,16 @@
 Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 
 ### Contents
-* [00 - Prerequisites](#00)
-* [01 - Downloading Microsoft Visual Studio 2022 for Windows](#01)
-* [02 - Building Console Apps (Book Chapter 1)](#02)
-	* [2.1 - Printing "Hello, C](#02.1)
-    * [2.2 - Top-level Programming](#02.2)
-    * [2.3 - Adding new project](#02.3)
-    * [2.4 - Implicitly imported namespaces](#02.4)
-    * [2.5 - Running the new project](#02.5)
-
-
-* [0x - Key Definitions](#0x)
----
-<a name="00"></a>
-### 00 - Prerequisites
-
-The tutorial uses the following software and tools:
-* Visual Studio 2022 (Installation guide below)
+* [Downloading Microsoft Visual Studio 2022 for Windows](#01)
+* [Key Definitions](#0x)
+### Jump to
+* [Ch1 - Building Console Apps](Chapter1.md)
+* [Ch2 - The C# Language](Chapter2.md)
 
 ---
-<a name="01"></a>
 ### 01 - Downloading Microsoft Visual Studio 2022 for Windows
+
+In the notes and projects, I use Microsoft Visual Studio 2022:
 
 1. Download Microsoft Visual Studio 2022 version 17.0 or later for Windows from the following link: [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/).
 
@@ -103,6 +92,7 @@ What are the drawbacks?
 * Only works for C# 9 or later.
 * "Using" still has to be at the top.
 
+<a name="02.3"></a>
 #### 2.3 - Adding new project
 1. Navigate to File > Add > New Project
 2. Save file to same solution "Chapter01" as ``TopLevelProgram``
@@ -110,6 +100,7 @@ What are the drawbacks?
 4. Press ``Program.cs`` in the *Solutions Explorer* to see the Source Code file(.cs).
 5. You may have noticed the ``Program.cs`` for ``TopLevelProgram`` does not have *namespace, Main method* or *Program class*. But if this is in the format of top-level program where is the *Using* keyword? (see section below)
 
+<a name="02.4"></a>
 #### 2.4 - Implicitly imported namespaces
 The reason the *Using* keyword is not necessary for the specific namespace ``System`` is because it is automatically imported as a global import.
 <br><br>
@@ -118,6 +109,7 @@ This can be seen by, making the pressing the *Show All Files* button in *Solutio
 <br>
 If you open the file *TopLevelProgram.GlobalUsings.g.cs* you will see all the global imports. 
 
+<a name="02.5"></a>
 #### 2.5 - Running the new project
 
 Let's change some settings to easily run new projects:
@@ -128,12 +120,76 @@ Now simply press on the desired project ``TopLevelProgram`` and then navigate to
 
 > *Debug* (top ribbon) > *Start Without Debugging*
 
+<a name="02.6"></a>
+#### 2.6 - Question & Answer
+<br>
+
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+<br><br></details>
+
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+1.	No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+</details>
+
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+1.	No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+</details>
+
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+1.	No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+<br><br></details>
 
 
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+1.	No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+<br><br></details>
 
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+1.	No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+<br><br></details>
 
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+1.	No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+<br><br></details>
 
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+1.	No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+<br><br></details>
 
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+1.	No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+<br><br></details>
+
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+1.	No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+<br><br></details>
+
+<details>
+<summary>Is Visual Studio 2022 better than Visual Studio Code?</summary>
+<br>
+1.	No you can do everything in both, although Visual Studio 2022 is used by developers and in industry more often
+<br><br></details>
 
 
 
@@ -236,4 +292,7 @@ using  System;
 // The line below doesn't need to have "System" anymore
 Console.WriteLine("Hello World!");
 ```
+#### C# and Visual Studio Code -specific Tips
 
+* **Go to definition :** This allows you to see the public definition of the type or member. For example you can look at the underlying code for ``int``. Declare an integer in the main class then:
+> *Click inside ``int``* > right-click > *go to definitions*
