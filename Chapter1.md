@@ -116,13 +116,13 @@ However, for .NET Core 3.0 there is a newer version ".NET Standards 2.1", which 
 <details>
 <summary><b>4. Why can a programmer use different languages, for example, C# and F#, to write applications that run on .NET?</b></summary>
 <br>
-C#, F# and Viual Baics languages are compiled to an Intermediate Language file (.exe or .dll) using different compilers (such as Roslyn for C#). IL is then compiled to native CPU instructions using CLR (common language runtime) at run-time.
+C#, F# and Visual Basics languages are compiled to an Intermediate Language file (.exe or .dll) using different compilers (such as Roslyn for C#). IL is then compiled to native CPU instructions using CLR (common language runtime) at run-time.
 <br><br></details>
 
 <details>
 <summary><b>5. What is the name of the entry point method of a .NET console application and how should it be declared?</b></summary>
 <br>
-Main method - it should be declared with void (since this method doesn't need to return anything). It should have an access mofifier of public, so that the compiler can find the method - for C# this is covered by the namespace keyword. The static keyword is used to associate the method to the class rather than an object (removes the need to instantiate an object to use the method). Optionally, we can have a string array as command-line arguments, and return int (rather than void).
+Main method - it should be declared with void (since this method doesn't need to return anything). It should have an access modifier of public, so that the compiler can find the method - for C# this is covered by the namespace keyword. The static keyword is used to associate the method to the class rather than an object (removes the need to instantiate an object to use the method). Optionally, we can have a string array as command-line arguments, and return int (rather than void).
 <br><br>
 Code: static void main(string[] args).
 <br><br></details>
