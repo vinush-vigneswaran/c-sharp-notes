@@ -125,10 +125,17 @@ C#, F# and Visual Basics languages are compiled to an Intermediate Language file
 <details>
 <summary><b>5. What is the name of the entry point method of a .NET console application and how should it be declared?</b></summary>
 <br>
-Main method - it should be declared with void (since this method doesn't need to return anything). It should have an access modifier of public, so that the compiler can find the method - for C# this is covered by the namespace keyword. The static keyword is used to associate the method to the class rather than an object (removes the need to instantiate an object to use the method). Optionally, we can have a string array as command-line arguments, and return int (rather than void).
+Main method - it should be declared with void (since this method doesn't need to return anything). It should have an access modifier of public, so that the compiler can find the method. In C# the access modifier of the Main() method can be private, public or internal - by default the class is Internal and the access modifier of the method is "Private". This is because in C# the executable .exe file (in IL) would automatically associate the entrypoint with main. However, you can make it public, if you want to use an API to trigger this program.
+<br><br>
+ The static keyword is used to associate the method to the class rather than an object (removes the need to instantiate an object to use the method). Optionally, we can have a string array as command-line arguments, and return int (rather than void).
 <br><br>
 Code: static void main(string[] args).
 <br><br></details>
+
+See [link](https://stackoverflow.com/questions/3110184/why-is-main-method-private)
+ and 
+[link](https://stackoverflow.com/questions/5828930/why-does-my-program-work-if-my-main-method-in-c-sharp-is-private)
+for above question.
 
 <details>
 <summary><b>6. What is a top-level program and how do you access any command-line arguments?</b></summary>

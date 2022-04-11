@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vocabulary", "Vocabulary\Vocabulary.csproj", "{D2B59243-730B-4BBB-AA69-566D832A3FFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestingAssemblyScope", "TestingAssemblyScope\TestingAssemblyScope.csproj", "{CBAEDCBF-754F-48C4-ABA5-399EA79B6A45}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{D2B59243-730B-4BBB-AA69-566D832A3FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2B59243-730B-4BBB-AA69-566D832A3FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2B59243-730B-4BBB-AA69-566D832A3FFE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBAEDCBF-754F-48C4-ABA5-399EA79B6A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBAEDCBF-754F-48C4-ABA5-399EA79B6A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBAEDCBF-754F-48C4-ABA5-399EA79B6A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBAEDCBF-754F-48C4-ABA5-399EA79B6A45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

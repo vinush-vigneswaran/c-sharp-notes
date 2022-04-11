@@ -3,3 +3,13 @@ C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\D
 C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.AssemblyInfoInputs.cache
 C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.AssemblyInfo.cs
 C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.csproj.CoreCompileInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\bin\Debug\net6.0\Vocabulary.exe
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\bin\Debug\net6.0\Vocabulary.deps.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\bin\Debug\net6.0\Vocabulary.runtimeconfig.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\bin\Debug\net6.0\Vocabulary.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\bin\Debug\net6.0\Vocabulary.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\refint\Vocabulary.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\Vocabulary.genruntimeconfig.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter02\Vocabulary\obj\Debug\net6.0\ref\Vocabulary.dll
