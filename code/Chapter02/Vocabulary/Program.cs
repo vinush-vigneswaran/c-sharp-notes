@@ -51,3 +51,19 @@ foreach (AssemblyName name in assembly.GetReferencedAssemblies())
     arg1: methodCount, arg2: name.Name);
 }
 // load the assembly so we can read its details
+
+////////////////////////////////// Doubles vs Decimals ////////////////////////////////
+// Lets see the number of types and methods available 
+Console.WriteLine("\n--- Using Doubles ---\n");
+
+double x = 0.1;
+double y = 0.2;
+
+if (x + y == 0.3)
+{
+    Console.WriteLine($"{x} + {y} equals {0.3}");
+}
+else
+{
+    Console.WriteLine($"{x} + {y} does NOT equal {0.3}");
+}

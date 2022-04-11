@@ -52,17 +52,17 @@ Create a new console app project:
 * C# provides a standard set of built-in types. These represent integers, floating point values, Boolean expressions, text characters, decimal values, and other types of data. There are also built-in string and object types. You use the struct, class, interface, enum, and record constructs to create your own custom types.
 
 #### **Global namespaces** 
-* You can set your own global namespaces which will be used accross your projects and classes as:
+* You can set your own global namespaces which will be used across your projects and classes as:
     ```C#
     global using System;
     global using System.Linq;
     global using System.Collections.Generic;
     ```
-* Recommended to use a seperate C# file for just global imports named *GlobalUsings.cs*. 
+* Recommended to use a separate C# file for just global imports named *GlobalUsings.cs*. 
 
 * The C#10 compiler automatically generates a .cs file for global imports in the *obj* folder. We can control these implicit imports by altering the ``.cdproj`` file:
     1. Go to *Solutions Explorer* > Select *Vocabulary Project* > *toggle Show All files* > select *obj* folder in the directory > *debug* > *net6.0*.
-    2. Examine the ``Vocabulary.GlobalUsings.g.cs`` file. These are implictly imported global namespaces. 
+    2. Examine the ``Vocabulary.GlobalUsings.g.cs`` file. These are implicitly imported global namespaces. 
     3. Let's change what namespaces are implicitly imported. Close the ``Vocabulary.GlobalUsings.g.cs`` file.
     4. We will remove the "System.Treading" namespaces and add "System.Numeric". Now press on *Vocabulary* project (.csproj) and add the following.
     ```
@@ -83,7 +83,7 @@ Create a new console app project:
     5. Save changes, check ``Vocabulary.GlobalUsings.g.cs`` file again to see if the changes have been applied. 
 
 #### **Methods**
-* With methods, the same method can be used differently based on it's arguments or other things (covered in Ch 5.) that can affect it's action. This is called ``overloading`` - "overloading a method". In the following example, the same function is used with different arugments producing different actions with those arguments:
+* With methods, the same method can be used differently based on it's arguments or other things (covered in Ch 5.) that can affect it's action. This is called ``overloading`` - "overloading a method". In the following example, the same function is used with different arguments producing different actions with those arguments:
     ```C#
     // outputs the current line terminator string
     // by default, this is a carriage-return and line feed (same as pressing enter)
@@ -105,7 +105,7 @@ Create a new console app project:
     char userChoice = GetSomeKeystroke(); // assigning from a fictitious function
 
     ```
-* A *literal* is any notation for represting a value within source code. Whereas, *identifiers* refer to value in memory.
+* A *literal* is any notation for representing a value within source code. Whereas, *identifiers* refer to value in memory.
 These are examples of literals:
     ```
     "hey" (a string)
@@ -129,7 +129,7 @@ These are examples of literals:
     int a = 1 + 2; // 1 + 2 is not a literal (it is an expression), but 1 and 2 considered separately are literals
     ```
 #### **Verbatim Literal String**
-* Sometimes you may unintentionally use an escape charater:
+* Sometimes you may unintentionally use an escape character:
     ```C#
     string filePath = "C:\televisions\sony\bravia.txt";
     ```
@@ -139,6 +139,13 @@ These are examples of literals:
     ```
 * This is a verbatim literal string, and it disables escape characters.
 
+#### **Interpolated string**
+A literal string prefixed with $ to enable embedded formatted variables. Example:
+
+```C#
+double a = 0.1;
+Console.WriteLine($"This is my value : {a}");
+```
 ---
 <a name="02.3"></a>
 ### 2.3 - The "Static" Keyword
@@ -218,9 +225,35 @@ Console.WriteLine($"The variable {nameof(heightInMetres)} has the value {heightI
 ---
 <a name="02.5"></a>
 ### 2.5 - Exploring Number Sizes
+* The operator ``sizeof()`` tells you the size, in bytes, that the type uses in memory:
+```C#
+Console.WriteLine($"int uses {sizeof(int)} bytes and can store numbers in the range {int.MinValue:N0} to {int.MaxValue:N0}.");
+Console.WriteLine($"double uses {sizeof(double)} bytes and can store numbers in the range {double.MinValue:N0} to {double.MaxValue:N0}.");
+Console.WriteLine($"decimal uses {sizeof(decimal)} bytes and can store numbers in the range {decimal.MinValue:N0} to {decimal.MaxValue:N0}." );
+```
+* Running the code above you will realise that a ``double`` variable can store bigger numbers than a decimal variable and yet only uses half the space in memory. Why?
 
+* The code below gives an unexpected result:
+```C#
+double x = 0.1;
+double y = 0.2;
 
-
+if (x + y == 0.3)
+{
+    Console.WriteLine($"{x} + {y} equals {0.3}");
+}
+else
+{
+    Console.WriteLine($"{x} + {y} does NOT equal {0.3}");
+}
+```
+Output:
+```
+0.1 + 0.2 does NOT equal 0.3
+```
+* The double type is not guaranteed to be accurate because some numbers like 0.1 
+cannot literally be represented as floating-point values.
+* Better to use double when accuracy and equality comparrison is not needed.
 
 
 
@@ -255,7 +288,7 @@ As with Java the class can be named anything - but it must have an access modifi
 
 
 <details>
-<summary><b>5. Is the keyword "String" a class, object or variable?</b></summary>
+<summary><b>4. Is the keyword "String" a class, object or variable?</b></summary>
 <br>
 String is a class. We create a new String object when we assign it to a variable name and give it a value.
 This is not the case with primitive data types.
