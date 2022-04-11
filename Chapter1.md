@@ -1,6 +1,6 @@
 # Ch1 - Building Console Apps 
 ## Notes from Chapter 1 "C# 10 and .NET 6" by Mark J. Price
----
+
 ## Contents
 Return [Home](README.md)
 * [1.1 - Printing "Hello, C](#01.1)

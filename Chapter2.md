@@ -1,6 +1,6 @@
 # Ch2 - The C# Language
 ## Notes from Chapter 2 "C# 10 and .NET 6" by Mark J. Price
----
+
 ## Contents
 Return [Home](README.md)
 * [2.1 - .NET and C# Versions](#02.1)
@@ -81,6 +81,21 @@ global using System.Collections.Generic;
     5. Save changes, check ``Vocabulary.GlobalUsings.g.cs`` file again to see if the changes have been applied. 
 
 #### **Methods**
+With methods, the same method can be used differently based on it's arguments or other things (covered in Ch 5.) that can affect it's action. This is called ``overloading`` - "overloading a method". In the following example, the same function is used with different arugments producing different actions with those arguments:
+```C#
+// outputs the current line terminator string
+// by default, this is a carriage-return and line feed (same as pressing enter)
+Console.WriteLine();
+
+// outputs the greeting and the current line terminator string
+Console.WriteLine("Hello Ahmed");
+
+// outputs a formatted number and date and the current line terminator string
+Console.WriteLine("Temperature on {0:D} is {1}°C.",
+DateTime.Today, 23.4);
+```
+
+
 
 
 
@@ -148,9 +163,6 @@ This function stops the car
 Only cars
 This function does not need for a Car object to be instantiated (because of the static)
 ```
-
-
-
 
 
 
