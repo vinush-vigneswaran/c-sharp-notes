@@ -5,13 +5,12 @@
 Return [Home](README.md)
 * [2.1 - .NET and C# Versions](#02.1)
 * [2.2 - C# Vocabulary](#02.2)
+* [2.3 - Static Keyword](#02.3)
 * [2.6 - Question & Answer](#02.6)
 
 The code for this tutorial can be found in ``code/Chapter02``
 
 ---
-
-
 
 <a name="02.1"></a>
 ### 2.1 - .NET and C# Versions  
@@ -63,34 +62,92 @@ global using System.Collections.Generic;
     1. Go to *Solutions Explorer* > Select *Vocabulary Project* > *toggle Show All files* > select *obj* folder in the directory > *debug* > *net6.0*.
     2. Examine the ``Vocabulary.GlobalUsings.g.cs`` file. These are implictly imported global namespaces. 
     3. Let's change what namespaces are implicitly imported. Close the ``Vocabulary.GlobalUsings.g.cs`` file.
-    4. We will remove the "System.Treading" namespaces and add "System.Numeric". Now press on *Vocabulary* project (.csproj) and add the following:
-```C#
-<Project Sdk="Microsoft.NET.Sdk">
+    4. We will remove the "System.Treading" namespaces and add "System.Numeric". Now press on *Vocabulary* project (.csproj) and add the following.
+    ```
+    <Project Sdk="Microsoft.NET.Sdk">
+        <PropertyGroup>
+            <OutputType>Exe</OutputType>
+            <TargetFramework>net6.0</TargetFramework>
+            <ImplicitUsings>enable</ImplicitUsings>
+            <Nullable>enable</Nullable>
+        </PropertyGroup>
 
-    <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-    </PropertyGroup>
-
-    <ItemGroup>
-        <Using Remove="System.Threading" />
-        <Using Include="System.Numerics" />
-    </ItemGroup>
-
-</Project>
-```
-<br>
-    
-    5. Save changes, check ``Vocabulary.GlobalUsings.g.cs`` file again to see if the changes have been applied.
+        <ItemGroup>
+            <Using Remove="System.Threading" />
+            <Using Include="System.Numerics" />
+        </ItemGroup>
+    </Project>
+    ``` 
+    5. Save changes, check ``Vocabulary.GlobalUsings.g.cs`` file again to see if the changes have been applied. 
 
 #### **Methods**
 
 
 
+---
+<a name="02.3"></a>
+### 2.3 - Static Keyword
+
+Read through the comments of the code to understand how the static keyword works:
+
+```C#
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine("This is main functIon");
+
+        // Create an object to run funcitons
+        Car myCar = new Car("Toyota", "Prius");
+        
+        // Now I can access a non-static function
+        myCar.stopCar();
+        
+        // To access numWheels - I need to use my instantiated object
+        Console.WriteLine(myCar.numWheel);
+        
+        // I cannot access the variable numWheels without instantiating an object
+        // But I can access vehicleType (static) without instantiating an object
+        Console.WriteLine(Car.vehicleType);
+        // Console.WriteLine(Car.numWheel); => Compilation error
+        
+        // Similarly I can access the static method without 
+        // using the object I created, directly from the class.
+        Car.seeCar();
+    }
+}
 
 
+public class Car
+{   
+    public int numWheel = 4;
+    public static String vehicleType = "Only cars";
+    
+    public Car(String make, String model)
+    {
+        Console.WriteLine("This car is of make: "+ make + " and model: " + model);
+    }
+    internal void stopCar()
+    {
+        Console.WriteLine("This function stops the car");
+    }
+    internal static void seeCar()
+    {
+        Console.WriteLine("This method does not need Car object to be instantiated");
+    }
+}
+```
+The output:
+```
+This is main funciton
+This car is of make: Toyota and model: Prius
+This function stops the car
+4
+Only cars
+This function does not need for a Car object to be instantiated (because of the static)
+```
 
 
 
@@ -116,4 +173,16 @@ A namespace contains types like classes to group them together.
 A class contains the members of an object including methods.
 <br><br>
 A method contains statements that implement an action that an object can take.
+<br><br></details>
+
+<details>
+<summary><b>3. What is the access modifier for the class and Main method?</b></summary>
+<br>
+As with Java the class can be named anything - but it must have an access modifier which is "internal" or "public".
+<br><br></details>
+
+<details>
+<summary><b>4. What does the access modifier "internal" do?</b></summary>
+<br>
+"internal" provides access to the type within the Assembly. The assembly is essentially a 
 <br><br></details>

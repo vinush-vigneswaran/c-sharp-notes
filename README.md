@@ -193,6 +193,11 @@ TypeError: unsupported operand type(s) for +: 'int' and 'str'
 ```
 So bugs can easily go unnoticed (compared to statically-typed) unless tested properly.
 
+* **Declarative coding :**Declarative programming is when you write your code in such a way that it describes what you want to do, and not how you want to do it. It is left up to the compiler to figure out the how.
+Examples of declarative programming languages are Prolog and SQL (DROP table, doesn't give the user to freedom to tell "how" to drop the table). In C# declarative coding is done using LINQ. Most query based languages are declarative.
+
+
+
 
 #### C# and Visual Studio Code -specific Tips
 
