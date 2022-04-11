@@ -5,7 +5,9 @@
 Return [Home](README.md)
 * [2.1 - .NET and C# Versions](#02.1)
 * [2.2 - C# Vocabulary](#02.2)
-* [2.3 - Static Keyword](#02.3)
+* [2.3 - The "Static" Keyword](#02.3)
+* [2.4 - Naming Convention](#02.4)
+* [2.5 - Exploring Number Sizes](#2.5)
 * [2.6 - Question & Answer](#02.6)
 
 The code for this tutorial can be found in ``code/Chapter02``
@@ -15,20 +17,20 @@ The code for this tutorial can be found in ``code/Chapter02``
 <a name="02.1"></a>
 ### 2.1 - .NET and C# Versions  
 * You can find out the version of your .NET SDK (Software Development Kit) on Windows by typing the following into *Command Prompt*:
-```
-dotnet --version
-```
+    ```
+    dotnet --version
+    ```
 * If you want to use features from a point release, that is, if your have C# 7.0 but want to use 7.1, 7.2, etc., you can modify the language version (``<LangVersion>``) in ``.csproj`` file, as follows:
 
-```csproj
-<Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
-        <LangVersion>7.1</LangVersion>
-    </PropertyGroup>
-</Project>
-```
+    ```csproj
+    <Project Sdk="Microsoft.NET.Sdk">
+        <PropertyGroup>
+            <OutputType>Exe</OutputType>
+            <TargetFramework>net6.0</TargetFramework>
+            <LangVersion>7.1</LangVersion>
+        </PropertyGroup>
+    </Project>
+    ```
 ---
 <a name="02.2"></a>
 ### 2.2 - C\# Vocabulary
@@ -51,11 +53,11 @@ Create a new console app project:
 
 #### **Global namespaces** 
 * You can set your own global namespaces which will be used accross your projects and classes as:
-```C#
-global using System;
-global using System.Linq;
-global using System.Collections.Generic;
-```
+    ```C#
+    global using System;
+    global using System.Linq;
+    global using System.Collections.Generic;
+    ```
 * Recommended to use a seperate C# file for just global imports named *GlobalUsings.cs*. 
 
 * The C#10 compiler automatically generates a .cs file for global imports in the *obj* folder. We can control these implicit imports by altering the ``.cdproj`` file:
@@ -81,27 +83,65 @@ global using System.Collections.Generic;
     5. Save changes, check ``Vocabulary.GlobalUsings.g.cs`` file again to see if the changes have been applied. 
 
 #### **Methods**
-With methods, the same method can be used differently based on it's arguments or other things (covered in Ch 5.) that can affect it's action. This is called ``overloading`` - "overloading a method". In the following example, the same function is used with different arugments producing different actions with those arguments:
-```C#
-// outputs the current line terminator string
-// by default, this is a carriage-return and line feed (same as pressing enter)
-Console.WriteLine();
+* With methods, the same method can be used differently based on it's arguments or other things (covered in Ch 5.) that can affect it's action. This is called ``overloading`` - "overloading a method". In the following example, the same function is used with different arugments producing different actions with those arguments:
+    ```C#
+    // outputs the current line terminator string
+    // by default, this is a carriage-return and line feed (same as pressing enter)
+    Console.WriteLine();
 
-// outputs the greeting and the current line terminator string
-Console.WriteLine("Hello Ahmed");
+    // outputs the greeting and the current line terminator string
+    Console.WriteLine("Hello Ahmed");
 
-// outputs a formatted number and date and the current line terminator string
-Console.WriteLine("Temperature on {0:D} is {1}°C.",
-DateTime.Today, 23.4);
-```
+    // outputs a formatted number and date and the current line terminator string
+    Console.WriteLine("Temperature on {0:D} is {1}°C.",
+    DateTime.Today, 23.4);
+    ```
+#### **Literal Value**
+* This is when a variable has a fixed value. For example:
+    ```C#
+    char letter = 'A'; // assigning literal characters
+    char digit = '1';
+    char symbol = '$';
+    char userChoice = GetSomeKeystroke(); // assigning from a fictitious function
 
-
-
-
+    ```
+* A *literal* is any notation for represting a value within source code. Whereas, *identifiers* refer to value in memory.
+These are examples of literals:
+    ```
+    "hey" (a string)
+    false (a boolean)
+    3.14 (a real number)
+    [1,2,3] (a list of numbers)
+    (x) => x*x (a function)
+    /^1?$|^(11+?)\1+$/ (a regexp)
+    ```
+* Not literals:
+    ```
+    std::cout (an identifier)
+    foo = 0; (a statement)
+    1+2 (an expression)
+    ```
+* In code:
+    ```C#
+    string x = "This is a literal";
+    int y = 2; // so is 2, but not y
+    int z = y + 4; // y and z are not literals, but 4 is
+    int a = 1 + 2; // 1 + 2 is not a literal (it is an expression), but 1 and 2 considered separately are literals
+    ```
+#### **Verbatim Literal String**
+* Sometimes you may unintentionally use an escape charater:
+    ```C#
+    string filePath = "C:\televisions\sony\bravia.txt";
+    ```
+* Here, the ``\t`` will be compiled as "tab". To avoid this, you can prefix the string with an @ sign:
+    ```C#
+    string filePath = @"C:\televisions\sony\bravia.txt";
+    ```
+* This is a verbatim literal string, and it disables escape characters.
 
 ---
 <a name="02.3"></a>
-### 2.3 - Static Keyword
+### 2.3 - The "Static" Keyword
 
 Read through the comments of the code to understand how the static keyword works:
 
@@ -163,6 +203,26 @@ This function stops the car
 Only cars
 This function does not need for a Car object to be instantiated (because of the static)
 ```
+---
+<a name="02.4"></a>
+### 2.4 - Naming Convention
+
+* **Camel Case** for local variables and private fields: ``cost`` and ``orderDetail`` .
+* **Title Case** for types, methods and other members: ``Cost`` and ``DateOfBirth``.
+Example:
+```C#
+// let the heightInMetres variable become equal to the value 1.88
+double heightInMetres = 1.88;
+Console.WriteLine($"The variable {nameof(heightInMetres)} has the value {heightInMetres}.");
+```
+---
+<a name="02.5"></a>
+### 2.5 - Exploring Number Sizes
+
+
+
+
+
 
 
 
@@ -193,8 +253,10 @@ A method contains statements that implement an action that an object can take.
 As with Java the class can be named anything - but it must have an access modifier which is "internal" or "public".
 <br><br></details>
 
+
 <details>
-<summary><b>4. What does the access modifier "internal" do?</b></summary>
+<summary><b>5. Is the keyword "String" a class, object or variable?</b></summary>
 <br>
-"internal" provides access to the type within the Assembly. The assembly is essentially a 
+String is a class. We create a new String object when we assign it to a variable name and give it a value.
+This is not the case with primitive data types.
 <br><br></details>

@@ -6,7 +6,6 @@ Return [Home](README.md)
 * [2 - OOPs and Keywords](#2)
 * [3 - C# and Visual Studio Code -specific Tips](#3)
 
-
 <a name="1"></a>
 # .NET 
 

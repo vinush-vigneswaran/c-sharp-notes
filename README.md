@@ -4,6 +4,7 @@ Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 
 ### Getting Started
 * [Downloading Microsoft Visual Studio 2022 for Windows](#01)
+
 ### Notes and Projects
 * [Ch1 - Building Console Apps](Chapter1.md)
 * [Ch2 - The C# Language](Chapter2.md)
