@@ -7,10 +7,15 @@ Return [Home](README.md)
 * [2.2 - C# Vocabulary](#02.2)
 * [2.3 - The "Static" Keyword](#02.3)
 * [2.4 - Naming Convention](#02.4)
-* [2.5 - Numbers vs Decimals Storage Size](#2.5)
-* [2.6 - Special type named](#2.6)
+* [2.5 - Numbers vs Decimals Storage Size](#02.5)
+* [2.6 - Special Types](#02.6)
+* [2.7 - Local Variables](#02.7)
+* [2.8 - Inferring Type of a Local Variable](#02.8)
+* [2.9 - No More Repeating Type for Object Creation](#02.9)
+* [2.10 - Default of a Value Type](#02.10)
+* [2.11 - Storing in Arrays](#02.11)
 
-* [2.6 - Question & Answer](#2.9)
+* [2.15 - Question & Answer](#02.15)
 
 The code for this tutorial can be found in ``code/Chapter02``
 
@@ -309,7 +314,138 @@ Output:
 * The reason for this is the way the type stores the value in memory (read the section above this).
 ---
 <a name="02.6"></a>
-### 2.6 - Special type named ``object``
+### 2.6 - Special Types
+#### Object Types
+* This is a special type named ``object`` that can store any type of data. 
+    ```C#
+    object height = 1.88; // storing a double in an object
+    object name = "Amir"; // storing a string in an object
+    Console.WriteLine($"{name} is {height} metres tall.");
+    int length1 = name.Length; // gives compile error!
+    int length2 = ((string)name).Length; // cast to string first
+    Console.WriteLine($"{name} has {length2} characters.");
+    ```
+* Avoid this where possible, leads to messy code and poor performance.
+* A better alternative is ``generics`` (Ch 6.) - better performance.
+#### Dynamic Types
+* Another special type called ``dynamic`` - even worse performance than ``object`` but does not require a specific cast.
+
+    ```C#
+    // storing a string in a dynamic object
+    // string has a Length property
+    dynamic something = "Ahmed";
+    // this compiles but would throw an exception at run-time
+    // if you later store a data type that does not have a
+    // property named Length
+    Console.WriteLine($"Length is {something.Length}"); //this outputs "Length is 5"
+    ```
+* When using ``dynamic`` the compiler cannot check the type during build time, instead the CLR checks for its member at runtime and throws an exception if missing. This is not type-inference because the type is figured out during run-time.
+
+---
+<a name="02.7"></a>
+### 2.7 - Declaring Local Variables
+* Local variables are declared inside methods and only exist during *execution* of that method.
+* Once the method returns, the memory allocated is released.
+* Value types are released, but references types must wait for a garbage collection.
+* Variables of **reference type** stores references of their data, whilst variables of **value types** store values of data.
+    ```C#
+    int population = 66_000_000; // 66 million in UK
+    double weight = 1.88; // in kilograms
+    
+    ```
+---
+<a name="02.8"></a>
+### 2.8 - Inferring Type of a Local Variable
+* Although Java is a statically-typed programming language, it does allows for the type to be inferred by using the keyword ``var``.
+* In this case the inference happens at compilation time.
+* The compiler infers the type based on the value assigned:
+    ```C#
+    var population = 66_000_000; // 66 million in UK
+    var weight = 1.88; // in kilograms
+    var price = 4.99M; // in pounds sterling (M infers decimal)
+    var fruit = "Apples"; // strings use double-quotes
+    var letter = 'Z'; // chars use single-quotes
+    var happy = true; // Booleans have value of true or false
+    ```
+* A literal value without a decimal is inferred as ``int``, unless you add the following suffix (see 2nd example in code above):
+    ```
+    L: infers long
+    UL: infers ulong
+    M: infers decimal
+    D: infers double
+    F: infers float
+    ```
+---
+<a name="02.9"></a>
+### 2.9 - No More Repeating Type for Object Creation
+* C# 9 onwards there is a new syntax for instantiating objects known a **target-typed new**.
+* You don't need to repeat the type after the ``new`` keyword:
+```C#
+class Person
+{
+public DateTime BirthDate;
+}
+Person kim = new();// instead of: Person kim = new Person()
+kim.BirthDate = new(1967, 12, 26); // instead of: new DateTime(1967, 12, 26)
+```
+---
+<a name="02.10"></a>
+### 2.10 - Default of a Value Type
+* Most of the primitive types except string are: **value types** (must have a value).
+* You can check the default value of a type by:
+    ```C#
+    Console.WriteLine($"default(int) = {default(int)}");
+    Console.WriteLine($"default(bool) = {default(bool)}");
+    Console.WriteLine($"default(DateTime) = {default(DateTime)}");
+    Console.WriteLine($"default(string) = {default(string)}");
+    ```
+    Output:
+    ```
+    default(int) = 0
+    default(bool) = False
+    default(DateTime) = 01/01/0001 00:00:00
+    default(string) =
+    ```
+* We can reset the value to default as such:
+    ```C#
+    int number = 13;
+    Console.WriteLine($"number has been set to: {number}");
+    number = default;
+    Console.WriteLine($"number has been reset to its default: {number}");
+    ```
+* ``string`` type is a **reference type**, meaning the ``string`` variable contains the memory address of the value, but not the value itself. This can have a value of ``null`` indicating it does not reference anything.
+
+---
+<a name="02.11"></a>
+### 2.11 - Storing in Arrays
+* Arrays are of fixed size at the time of memory allocation, therefore, you have to decide how many items you want before instantiating them.
+* Arrays are good for temporary storage, but when working dynamically to add/remove items ``collections`` are better.
+* Ways to store multiple values in string array:
+    ```C#
+    string[] names; // can reference any size array of strings
+    // allocating memory for four strings in an array
+    names = new string[4];
+    // storing items at index positions
+    names[0] = "Kate";
+    names[1] = "Jack";
+    names[2] = "Rebecca";
+    names[3] = "Tom";
+    // looping through the names
+    for (int i = 0; i < names.Length; i++)
+    {
+        // output the item at index position i
+        Console.WriteLine(names[i]);
+    }
+    ```
+* More compact:
+    ```C#
+    string[] names2 = new[] { "Kate", "Jack", "Rebecca", "Tom" };
+    ```
+* At least one item must be in the curly brackets when using ``new[]`` so that the compiler can infer type.
+
+
+
+
 
 
 
@@ -322,8 +458,8 @@ Output:
 
 
 ---
-<a name="02.9"></a>
-### 2.9 - Question & Answer
+<a name="02.15"></a>
+### 2.15 - Question & Answer
 <br>
 
 <details>

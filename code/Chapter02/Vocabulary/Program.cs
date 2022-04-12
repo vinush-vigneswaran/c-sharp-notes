@@ -79,3 +79,6 @@ else
 {
     Console.WriteLine($"{c} + {d} does NOT equal {0.3M}");
 }
+
+
+Console.WriteLine($"double uses {sizeof(double)} bytes and can store numbers in the range {double.MinValue:N0} to {double.MaxValue:N0}.");
