@@ -7,8 +7,10 @@ Return [Home](README.md)
 * [2.2 - C# Vocabulary](#02.2)
 * [2.3 - The "Static" Keyword](#02.3)
 * [2.4 - Naming Convention](#02.4)
-* [2.5 - Exploring Number Sizes](#2.5)
-* [2.6 - Question & Answer](#02.6)
+* [2.5 - Numbers vs Decimals Storage Size](#2.5)
+* [2.6 - Special type named](#2.6)
+
+* [2.6 - Question & Answer](#2.9)
 
 The code for this tutorial can be found in ``code/Chapter02``
 
@@ -224,7 +226,9 @@ Console.WriteLine($"The variable {nameof(heightInMetres)} has the value {heightI
 ```
 ---
 <a name="02.5"></a>
-### 2.5 - Exploring Number Sizes
+### 2.5 - Numbers vs Decimals Storage Size
+
+#### Size difference
 * The operator ``sizeof()`` tells you the size, in bytes, that the type uses in memory:
 ```C#
 Console.WriteLine($"int uses {sizeof(int)} bytes and can store numbers in the range {int.MinValue:N0} to {int.MaxValue:N0}.");
@@ -233,6 +237,37 @@ Console.WriteLine($"decimal uses {sizeof(decimal)} bytes and can store numbers i
 ```
 * Running the code above you will realise that a ``double`` variable can store bigger numbers than a decimal variable and yet only uses half the space in memory. Why?
 
+* *Double* 
+    * Uses 8 bytes(64 bits)
+    * Much Larger range
+    * Stores in base 2
+    * Faster computation (executed by machine)
+
+* *Decimal* 
+    * Uses 16 bytes (128 bits)
+    * Smaller range 
+    * Stores in base 10 (stores the value as large integer and with a note to shift the decimal point to the left)
+    * Precise value
+    * Slower computation (executed in software)
+
+* ``decimal`` is stored as an large int, so the 128 bits has one sign bit, and 127 bits to represent the integer value as well as the position of the decimal. From the code above we know the max value of a decimal is ``max_val=79,228,162,514,264,337,593,543,950,335`` which is equivalent to 2^95 + 2^94 + 2^93 ... 2^0, in other words 95-digit binary with all ones is equivalent to ``max_val``. This means the remaining 32 bits is used for the decimal placing, and possibly other stuff.
+
+* On the otherhand, ``double`` has 62 bits, but with a much higher ``max_val=1.80E+308``. This is because it uses an exponent (as a scaling factor) - being able to store larger values BUT at the cost of precision. The double is stored as a ``floating point`` number which consists of a mantissa/ significand/coefficient and an exponent: ``(coefficient)*2^(exponent)``. Think of this as standard form in science.
+
+> ![Floating Point Memory Allocation](media/floating_point.png)
+
+* Let's have a look at the scaling that happens within a double-precision floating-point format according to the IEEE 754 standard. The first bit is a sign bit, then we have 11 bits to represent the exponent, and 52 bits to represent the coefficient.
+    * The signed bit, s, is simply converted using: ``(-1)^s``
+    * The exponent part, p, is converted to decimal using this formula: ``2^(p-1023)``, the max value of p is 2047 but the value 2047 is reserved (as infinity or NaN), therefore, the highest value of p is 2046.
+    * The fraction part, F, is converted using binary as F = ``(f_0 * 2^-0) + (f_1 * 2^-1)  + (f_2 * 2^-2)  + ... (f_51 * 2^-51) `` where
+    ``f_n`` is the n-index of the fraction part of the binary. ``f_1`` would be the value of the first position in the binary.
+    * Finally but the values into this formula to convert to decimal: ``(-1)^s * 2^(p-1023) * F``
+
+* This means the max value of 64-bit double should be ``max_val = (1) * 2^(1023) * 9007199254740991 = 8E+324``. As you can see this is considerably larger than the actual value ``max_val=1.80E+308``. There is a difference in the two values by a factor of ``2^(52)``. Which means that the max value is actually found by ``max_val = (1) * 2^(1023-52) * 9007199254740991 = 1.80E+308``. 
+* I have no idea what those 52 bits in the exponent is used for - since it is not used to convert to base 10.
+
+
+#### Precision vs Performance
 * The code below gives an unexpected result:
 ```C#
 double x = 0.1;
@@ -253,15 +288,42 @@ Output:
 ```
 * The double type is not guaranteed to be accurate because some numbers like 0.1 
 cannot literally be represented as floating-point values.
-* Better to use double when accuracy and equality comparrison is not needed.
+* Better to use double when accuracy and equality comparrison is not needed (you can still use it for > abnd <).
+* Let's try the same code with decimals:
+```C#
+decimal c = 0.1M; // M suffix means a decimal literal value
+decimal d = 0.2M;
+if (c + d == 0.3M)
+{
+    Console.WriteLine($"{c} + {d} equals {0.3M}");
+}
+else
+{
+    Console.WriteLine($"{c} + {d} does NOT equal {0.3M}");
+}
+```
+Output:
+```
+0.1 + 0.2 equals 0.3
+```
+* The reason for this is the way the type stores the value in memory (read the section above this).
+---
+<a name="02.6"></a>
+### 2.6 - Special type named ``object``
+
+
+
+
+
+
 
 
 
 
 
 ---
-<a name="02.6"></a>
-### 2.6 - Question & Answer
+<a name="02.9"></a>
+### 2.9 - Question & Answer
 <br>
 
 <details>
@@ -292,4 +354,16 @@ As with Java the class can be named anything - but it must have an access modifi
 <br>
 String is a class. We create a new String object when we assign it to a variable name and give it a value.
 This is not the case with primitive data types.
+<br><br></details>
+
+<details>
+<summary><b>5. Why is double type smaller in memory but larger in range of values than decimal?</b></summary>
+<br>
+--
+<br><br></details>
+
+<details>
+<summary><b>6. What is floating point arithmetic?</b></summary>
+<br>
+---
 <br><br></details>

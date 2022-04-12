@@ -124,8 +124,7 @@ If we run this (Go):
 ```Go
 package main
 
-import ("fmt"
-)
+import ("fmt")
 
 func silly(a int) {
     if (a > 0) {
