@@ -14,7 +14,6 @@ Return [Home](README.md)
 * [2.9 - No More Repeating Type for Object Creation](#02.9)
 * [2.10 - Default of a Value Type](#02.10)
 * [2.11 - Storing in Arrays](#02.11)
-
 * [2.15 - Question & Answer](#02.15)
 
 The code for this tutorial can be found in ``code/Chapter02``
