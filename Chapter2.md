@@ -14,7 +14,9 @@ Return [Home](README.md)
 * [2.9 - No More Repeating Type for Object Creation](#02.9)
 * [2.10 - Default of a Value Type](#02.10)
 * [2.11 - Storing in Arrays](#02.11)
-* [2.15 - Question & Answer](#02.15)
+* [2.12 - Incorporating Numbers in String](#02.12)
+* [2.13 - User Input](#02.13)
+* [2.14 - Question & Answer](#02.14)
 
 The code for this tutorial can be found in ``code/Chapter02``
 
@@ -557,8 +559,8 @@ Key: K, Char: K, Modifiers: Shift
 ```
 
 ---
-<a name="02.15"></a>
-### 2.15 - Question & Answer
+<a name="02.14"></a>
+### 2.14 - Question & Answer
 <br>
 
 <details>
