@@ -8,9 +8,9 @@ Return [Home](README.md)
 * [2.3 - The "Static" Keyword](#02.3)
 * [2.4 - Naming Convention](#02.4)
 * [2.5 - Numbers vs Decimals Storage Size](#02.5)
-* [2.6 - Special Types](#02.6)
+* [2.6 - Special Types (Object & Dynamic)](#02.6)
 * [2.7 - Local Variables](#02.7)
-* [2.8 - Inferring Type of a Local Variable](#02.8)
+* [2.8 - Inferring Type using "var" Keyword](#02.8)
 * [2.9 - No More Repeating Type for Object Creation](#02.9)
 * [2.10 - Default of a Value Type](#02.10)
 * [2.11 - Storing in Arrays](#02.11)
@@ -53,6 +53,12 @@ Create a new console app project:
 
 #### **Using** 
 * The ``using System;`` keyword points to the namespace for types. If the namespace hasn't been prefixed to the types as such: ``System.Console.Writeline("...")``, then the compiler looks for the "Using" keyword.
+
+* We can also import a static class using the ``using`` keyword: 
+    ```C#
+    using static System.Console;
+    ```
+* There is no need to use ``Console.Writeline(...)`` anymore, instead ``Writeline(...)`` is sufficient. 
 
 #### **Types** 
 * C# provides a standard set of built-in types. These represent integers, floating point values, Boolean expressions, text characters, decimal values, and other types of data. There are also built-in string and object types. You use the struct, class, interface, enum, and record constructs to create your own custom types.
@@ -256,7 +262,7 @@ Console.WriteLine($"decimal uses {sizeof(decimal)} bytes and can store numbers i
 
 * ``decimal`` is stored as an large int, so the 128 bits has one sign bit, and 127 bits to represent the integer value as well as the position of the decimal. From the code above we know the max value of a decimal is ``max_val=79,228,162,514,264,337,593,543,950,335`` which is equivalent to 2^95 + 2^94 + 2^93 ... 2^0, in other words 95-digit binary with all ones is equivalent to ``max_val``. This means the remaining 32 bits is used for the decimal placing, and possibly other stuff.
 
-* On the otherhand, ``double`` has 62 bits, but with a much higher ``max_val=1.80E+308``. This is because it uses an exponent (as a scaling factor) - being able to store larger values BUT at the cost of precision. The double is stored as a ``floating point`` number which consists of a mantissa/ significand/coefficient and an exponent: ``(coefficient)*2^(exponent)``. Think of this as standard form in science.
+* On the other hand, ``double`` has 62 bits, but with a much higher ``max_val=1.80E+308``. This is because it uses an exponent (as a scaling factor) - being able to store larger values BUT at the cost of precision. The double is stored as a ``floating point`` number which consists of a mantissa/ significand/coefficient and an exponent: ``(coefficient)*2^(exponent)``. Think of this as standard form in science.
 
 > ![Floating Point Memory Allocation](media/floating_point.png)
 
@@ -292,7 +298,7 @@ Output:
 ```
 * The double type is not guaranteed to be accurate because some numbers like 0.1 
 cannot literally be represented as floating-point values.
-* Better to use double when accuracy and equality comparrison is not needed (you can still use it for > abnd <).
+* Better to use double when accuracy and equality comparison is not needed (you can still use it for > and <).
 * Let's try the same code with decimals:
 ```C#
 decimal c = 0.1M; // M suffix means a decimal literal value
@@ -313,7 +319,7 @@ Output:
 * The reason for this is the way the type stores the value in memory (read the section above this).
 ---
 <a name="02.6"></a>
-### 2.6 - Special Types
+### 2.6 - Special Types (Object & Dynamic)
 #### Object Types
 * This is a special type named ``object`` that can store any type of data. 
     ```C#
@@ -327,7 +333,7 @@ Output:
 * Avoid this where possible, leads to messy code and poor performance.
 * A better alternative is ``generics`` (Ch 6.) - better performance.
 #### Dynamic Types
-* Another special type called ``dynamic`` - even worse performance than ``object`` but does not require a specific cast.
+* Another special type is called ``dynamic`` - even worse performance than ``object`` but does not require a specific cast.
 
     ```C#
     // storing a string in a dynamic object
@@ -339,6 +345,7 @@ Output:
     Console.WriteLine($"Length is {something.Length}"); //this outputs "Length is 5"
     ```
 * When using ``dynamic`` the compiler cannot check the type during build time, instead the CLR checks for its member at runtime and throws an exception if missing. This is not type-inference because the type is figured out during run-time.
+* Another difference is that, the type of the data can be changed, i.e. dynamic. Even after compiling the type is unknown to the compiler - until runtime. However, with type inference variable ``var`` the data type needs to be fixed (since in compile-time it must know its type). 
 
 ---
 <a name="02.7"></a>
@@ -354,7 +361,7 @@ Output:
     ```
 ---
 <a name="02.8"></a>
-### 2.8 - Inferring Type of a Local Variable
+### 2.8 - Inferring Type using "var" Keyword
 * Although Java is a statically-typed programming language, it does allows for the type to be inferred by using the keyword ``var``.
 * In this case the inference happens at compilation time.
 * The compiler infers the type based on the value assigned:
@@ -442,19 +449,112 @@ kim.BirthDate = new(1967, 12, 26); // instead of: new DateTime(1967, 12, 26)
     ```
 * At least one item must be in the curly brackets when using ``new[]`` so that the compiler can infer type.
 
+---
+<a name="02.12"></a>
+### 2.12 - Incorporating Numbers in String
+* The following code is created in new console application named: ``Formatting`` in ``Chapter02`` solution.
+
+* **Using Numbered Positional Arguments :**
+```C#
+int numberOfApples = 12;
+decimal pricePerApple = 0.35M;
+
+Console.WriteLine(
+    format: "{0} apples costs {1:C}",
+    arg0: numberOfApples,
+    arg1: pricePerApple * numberOfApples);
+
+string formatted = string.Format(
+    format: "{0} apples costs {1:C}",
+    arg0: numberOfApples,
+    arg1: pricePerApple * numberOfApples);
+```
+* **Format strings :**
+* The `C` in ``{1:C}`` is a format specifier for currency. There are other ones for percentage (P), hexadecimal (X), etc. Find more in [official docs](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings)
+* Let's look at more examples:
+```C#
+string applesText = "Apples";
+int applesCount = 1234;
+string bananasText = "Bananas";
+int bananasCount = 56789;
+
+Console.WriteLine(
+    format: "{0,-10} {1,6:N0}",
+    arg0: "Name",
+    arg1: "Count");
+
+Console.WriteLine(
+    format: "{0,-10} {1,6:N2}",
+    arg0: applesText,
+    arg1: applesCount);
+
+Console.WriteLine(
+    format: "{0,-10} {1,6:N0}",
+    arg0: bananasText,
+    arg1: bananasCount);
+```
+Output:
+```
+Name        Count
+Apples     1,234.00
+Bananas    56,789
+```
+* Lets look at the second ``WriteLine`` function's `{1,6:N2}`: The ``1`` points to the value stored in ``arg1``, and the ``6`` is an ``alignment`` value used to left- or right- align (using -ve or +ve values). In this case it spaces 6 characters from the 10 characters spacing used by ``arg0``, i.e. ``{0,-10}``. Finaly the ``N`` is the format specifier ``number`` with 2 decimals, hence ``N2``.
+* In the output, you can see the ``Count`` string is right-aligned with the decimal and the end of the bananas integer.
+* The syntax of a format item is:
+    ```
+    { index [, alignment ] [ : formatString ] }
+    ```
 
 
+* **Interpolated Strings :**
+* Prefix ``$`` with the string (as below) and you can use the variable names directly with curly brackets.
+```C#
+Console.WriteLine($"{numberOfApples} apples costs {pricePerApple * numberOfApples:C}");
+```
+```C#
+private const string firstname = "Omar";
+private const string lastname = "Rudberg";
+private const string fullname = "{firstname} {lastname}";
+```
 
+---
+<a name="02.13"></a>
+### 2.13 - User Input
 
+#### ReadLine
+* Use the ``Console.ReadLine();`` method to get user input:
+```C#
+Console.Write("Type your first name and press ENTER: ");
+string? firstName = Console.ReadLine();
 
+Console.Write("Type your age and press ENTER: ");
+string? age = Console.ReadLine();
 
+Console.WriteLine(
+$"Hello {firstName}, you look good for {age}.");
+```
+* The same line works without the "?" but there would be warning.
+* The ``?`` indicates that a ``null`` (empty) value could be returned from ``ReadLine()``.
 
+#### ReadKey
+* Use the ``Console.ReadKey();`` method to get user key or combination of keys as input:
+```C#
+using static System.Console;
 
-
-
-
-
-
+Write("Press any key combination: ");
+ConsoleKeyInfo key = ReadKey();
+WriteLine();
+WriteLine("Key: {0}, Char: {1}, Modifiers: {2}",
+    arg0: key.Key,
+    arg1: key.KeyChar,
+    arg2: key.Modifiers);
+```
+* If you press ``Shift + S`` when prompted, this will be your output:
+```
+Press any key combination: K
+Key: K, Char: K, Modifiers: Shift
+```
 
 ---
 <a name="02.15"></a>
@@ -494,11 +594,90 @@ This is not the case with primitive data types.
 <details>
 <summary><b>5. Why is double type smaller in memory but larger in range of values than decimal?</b></summary>
 <br>
---
+A double type uses floating-point arithmetic to scale the values, this would give a larger range with smaller storage in memory - however precision is greatly impacted. Decimals are converted from binary to decimal directly, therefore have high precision but cannot express large numbers or long decimals.
 <br><br></details>
 
 <details>
 <summary><b>6. What is floating point arithmetic?</b></summary>
 <br>
----
+A way of storing numbers (double and float) such that the binary values are scaled up when converted to decimal. This is done by using a coefficient and exponent.
+<br><br></details>
+
+<details>
+<summary><b>7. How to pass arguments to a console app?</b></summary>
+<br>
+* Even with top-level-programs there are behind-the-scene declaration of ``args`` string array.
+* You pass the arguments into command-line, separating out the args by spaces.
+* In visual studio, you can pass the arguments as such: Navigate to Project > Arguments Properties > select Debug tab > type the arguments into "Application Arguments" box.
+<br><br></details>
+
+<!-- Book Questions -->
+
+<details>
+<summary><b>8. What statement can you type in a C# file to discover the compiler and language version?</b></summary>
+<br>
+ #error version
+ <br>
+ ^ this would give the compiler version as an error.
+ <br><br>
+ dotnet --version
+ <br>
+ ^ type this into command prompt to find out .NET version
+<br><br></details>
+
+<details>
+<summary><b>9. What are the two types of comments in C#?</b></summary>
+<br>
+ // and /*  */
+<br><br></details>
+
+<details>
+<summary><b>10. What is the difference between a verbatim string and an interpolated string?</b></summary>
+<br>
+ Verbatim (@) => ignores escape characters.
+ <br>
+ Interpolated ($) => allows string to incorporate arguments/expressions using curly brackets.
+<br><br></details>
+
+<details>
+<summary><b>11. Why should you be careful when using float and double values?</b></summary>
+<br>
+ Precision is low because of the way they are stored (floating point representation). Should not performing equality (==) comparisons.
+<br><br></details>
+
+<details>
+<summary><b>12. How can you determine how many bytes a type like double uses in memory?</b></summary>
+<br>
+ Using the C# function: sizeOf(double)
+<br><br></details>
+
+<details>
+<summary><b>13. When should you use the var keyword?</b></summary>
+<br>
+ When the data type is not known at the time of declaration.
+<br><br></details>
+
+<details>
+<summary><b>14. What is the newest way to create an instance of a class like XmlDocument?</b></summary>
+<br>
+ XmlDocument myDoc = new();
+<br><br></details>
+
+<details>
+<summary><b>15. Why should you be careful when using the dynamic type?</b></summary>
+<br>
+ It has poor performance, and throws exceptions at runtime (not compilation), which means bugs cannot be detected during compilation. It also means runtime exceptions being thrown, if you attempt to use a member that does not exist on the type.
+<br><br></details>
+
+<details>
+<summary><b>16. How do you right-align a format string?</b></summary>
+<br>
+ {1,7:C} - In this example 1 = argument 1 and 7 right-aligns with seven characters. To left-align simply change to negative value:  {1,-7:C}
+<br><br></details>
+
+
+<details>
+<summary><b>17. What character separates arguments for a console application?</b></summary>
+<br>
+ space character
 <br><br></details>
