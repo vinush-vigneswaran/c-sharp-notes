@@ -3,7 +3,7 @@
 
 ## Contents
 Return [Home](README.md)
-* [3.1 - Definitions](#03.1)
+* [3.1 - Definitions and Concepts](#03.1)
 * [3.2 - Unary and Binary Operators](#03.2)
 * [3.3 - Short-circuiting Boolean Operators](#03.3)
 *
@@ -13,7 +13,7 @@ The code for this tutorial can be found in ``code/Chapter03``
 
 ---
 <a name="03.1"></a>
-### 3.1 - Definitions
+### 3.1 - Definitions and Concepts
 
 #### **Binary operators** 
 * When an operator (e.g. +, -,/,\*) works on two operands e.g. ``int resultOfAdding = x + y;``
@@ -35,7 +35,58 @@ int howManyBytesInAnInteger = sizeof(int);
 * **Member access operator :** the dot between a variable and its members ``age.ToString()``.
 * **Invocation operator :** the round brackets at the end of a method ``age.ToString()``.
 
+#### **Pattern Matching**
+* In the following example we will see a way of checking the variable type is correct before performing operations. If not, it will produce an warning message:
+    ```C#
+    // add and remove the "" to change the behavior
+    object o = "3";
+    int j = 4;
+    if (o is int i)
+    {
+        WriteLine($"{i} x {j} = {i * j}");
+    }
+    else
+    {
+        WriteLine("o is not an int so it cannot multiply!");
+    }
+    ``` 
+* If the value stored in the variable named ``o`` is an ``int``, then the value is assigned to the local variable named ``i``, which can then be used inside the ``if statement``. 
+* This is safer than using the variable named ``o`` because we know for sure that ``i`` is an ``int`` variable and not something else.
 
+#### **Switch Statement**
+
+* Switch statements are different from if-statements, because the ``switch`` compares a single expression against a list of multiple case statements. 
+* This is unlike if-statements, which gets passed down if the statement is ``False``, to the next ``else if`` or ``else`` statement.
+* Example:
+    ```C#
+    int number = (new Random()).Next(1, 7);
+    WriteLine($"My random number is {number}");
+
+    switch (number)
+    {
+        case 1:
+            WriteLine("One");
+            break; // jumps to end of switch statement
+        case 2:
+            WriteLine("Two");
+            goto case 1;
+        case 3: // multiple case section
+        case 4:
+            WriteLine("Three or four");
+            goto case 1;
+        case 5:
+            goto A_label;
+            default:
+            WriteLine("Default");
+        break;
+    } // end of switch statement
+
+    WriteLine("After end of switch");
+    A_label:
+        WriteLine($"After A_label");
+    ```
+* See in case 5, it says ``go to A_label`` which means it will skip to the line ``A_label:`` and carry on from there.
+* A label, e.g. ``A_label``, is denoted with a colon.
 
 
 
