@@ -29,6 +29,17 @@ int howManyBytesInAnInteger = sizeof(int);
 * Examples of unary operators include incrementors and retrieving a type or its size in bytes.
 * The operand can be before or after the operator.
 
+#### **Miscellaneous Operators** 
+* ``nameof`` returns the short name (without the namespace) of a variable, type, or member as a string value, which is useful when outputting exception messages. So for ``a=3``, ``nameof(a)`` would output ``a``.
+* ``sizeof`` returns the size in bytes of simple types, which is useful for determining the efficiency of data storage.
+* **Member access operator :** the dot between a variable and its members ``age.ToString()``.
+* **Invocation operator :** the round brackets at the end of a method ``age.ToString()``.
+
+
+
+
+
+
 ---
 <a name="03.2"></a>
 ### 3.2 - Unary and Binary Operators
@@ -93,12 +104,37 @@ int howManyBytesInAnInteger = sizeof(int);
 ---
 <a name="03.4"></a>
 ### 3.4 - Exploring Bitwise and Binary Shift Operators
+* Bit operations are much faster than than traditional operators.
+* You can do bit-by-bit operations:
+    ```
+    // Exploring bitwise and binary shift operators
 
+    int a = 10; // 00001010
+    int b = 6; // 00000110
 
-
-
-
-
+    WriteLine($"a = {a}");
+    WriteLine($"b = {b}");
+    WriteLine($"a & b = {a & b}"); // 2-bit column only
+    WriteLine($"a | b = {a | b}"); // 8, 4, and 2-bit columns
+    WriteLine($"a ^ b = {a ^ b}"); // 8 and 4-bit columns
+    ```
+* ``a & b`` is the same as ``and`` operating each bit as:  ``00001010`` && ``00000110`` = 00000010 => 2
+* ``a | b`` is the same as ``or`` operating each bit as:  ``00001010`` ||``00000110`` = 00001110 => 14
+* You can do bit shifting to do faster calculations:
+    ```C#
+    // 01010000 left-shift a by three bit columns
+    WriteLine($"a << 3 = {a << 3}");
+    // multiply a by 8
+    WriteLine($"a * 8 = {a * 8}");
+    ```
+* The 80 result is because the bits in it were shifted three columns to the left, so the 1-bits moved into the 64- and 16-bit columns and 64 + 16 = 80. This is the same as multiplying by 8, but CPUs can perform a bit-shift faster.
+* We can convert integers to 8-bit binary string using this function:
+    ```C#
+    static string ToBinaryString(int value)
+    {
+    return Convert.ToString(value, toBase: 2).PadLeft(8, '0');
+    }
+    ```
 
 
 
