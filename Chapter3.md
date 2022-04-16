@@ -262,10 +262,30 @@ switch (s)
 ---
 <a name="03.6"></a>
 ### 3.6 - Switch Expressions using Lambda
+* Switch expressions simplify the code using lambda ``=>`` to indicate return a value.
 
+```C#
 
+message = s switch
+{
+    FileStream writeableFile when s.CanWrite
+        => "The stream is a file that I can write to.",
+    FileStream readOnlyFile
+        => "The stream is a read-only file.",
+    MemoryStream ms
+        => "The stream is a memory address.",
+    null
+        => "The stream is null.",
+    _
+        => "The stream is some other type."
+};
+WriteLine(message);
 
-
+```
+#### Main Differences
+* Removal of ``case`` and ``break``
+* The ``_`` is used instead of default.
+* We return the string, and assign that to message. Rather than return ``message="..."`` at each case.
 
 
 
@@ -275,8 +295,14 @@ switch (s)
 <br>
 
 <details>
-<summary><b>1. ?</b></summary>
+<summary><b>1. What is the difference between a while loop and a do-while loop?</b></summary>
 <br>
-This extension is a C# project file that contains the list of files included in a project along with the references to system assemblies (dependencies)
+The while loop checks the condition then runs the statement, whereas the do-while loop, runs the statment first then check if the condition is still true.
 <br><br></details>
 
+
+<details>
+<summary><b>2. What does a for-each loop do?</b></summary>
+<br>
+The while loop checks the condition then runs the statement, whereas the do-while loop, runs the statment first then check if the condition is still true.
+<br><br></details>

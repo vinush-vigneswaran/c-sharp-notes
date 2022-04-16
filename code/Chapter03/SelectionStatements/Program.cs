@@ -86,22 +86,25 @@ switch (s)
 {
     case FileStream writeableFile when s.CanWrite:
         // If s.CanWrite is true (i.e. it is a write-able file)
-        // and it its of class FileStream
+        // and it is of class FileStream
         // then use writeableFile as the local variable of type FileStream (Class).
         message = "The stream is a file that I can write to.";
         break;
     case FileStream readOnlyFile:
-        // Otherwise, if it's a FileStream and not Writeable then 
+        // Otherwise, if it's a FileStream then 
         // it is a readOnlyFile
         message = "The stream is a read-only file.";
         break;
     case MemoryStream ms:
+        // If its a Memory stream then this is satisfied
         message = "The stream is a memory address.";
         break;
-    default: // always evaluated last despite its current position
+    default: 
+        // This is always evaluated last despite its current position
         message = "The stream is some other type.";
         break;
     case null:
+        // If its null then this is satisfied
         message = "The stream is null.";
         break;
 }
