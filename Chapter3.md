@@ -4,9 +4,12 @@
 ## Contents
 Return [Home](README.md)
 * [3.1 - Definitions and Concepts](#03.1)
-* [3.2 - Unary and Binary Operators](#03.2)
+* [3.2 - Post- and Pre- Incrementors](#03.2)
 * [3.3 - Short-circuiting Boolean Operators](#03.3)
-*
+* [3.4 - Exploring Bitwise and Binary Shift Operators](#03.4)
+* [3.5 - Pattern Matching with Switch Statements](#03.5)
+* [3.6 - Switch Expressions using Lambda](#03.6)
+
 * [3.14 - Question & Answer](#03.14)
 
 The code for this tutorial can be found in ``code/Chapter03``
@@ -55,8 +58,7 @@ int howManyBytesInAnInteger = sizeof(int);
 
 #### **Switch Statement**
 
-* Switch statements are different from if-statements, because the ``switch`` compares a single expression against a list of multiple case statements. 
-* This is unlike if-statements, which gets passed down if the statement is ``False``, to the next ``else if`` or ``else`` statement.
+* Switch statements are similar to if-statements, because the ``switch`` compares a single expression against a list of multiple case statements. 
 * Example:
     ```C#
     int number = (new Random()).Next(1, 7);
@@ -93,7 +95,7 @@ int howManyBytesInAnInteger = sizeof(int);
 
 ---
 <a name="03.2"></a>
-### 3.2 - Unary and Binary Operators
+### 3.2 - Post- and Pre- Incrementors
 
 * Look at the following code:
     ```C#
@@ -115,7 +117,7 @@ int howManyBytesInAnInteger = sizeof(int);
     ```
 * Ouput:
     ```
-    c is 4, b is 4
+    c is 4, d is 4
     ```
 ---
 <a name="03.3"></a>
@@ -150,7 +152,7 @@ int howManyBytesInAnInteger = sizeof(int);
     a && DoStuff() = True
     b && DoStuff() = False
     ```
-* In the above code, the function was called for the first three statements, but not for the last one. This is because if ``b=False``, then the output will be Fales regardless of the boolean value of ``DoStuff()``. Therefore, it does not need read past the ``&&`` symbols, thus does not need to run the function ``DoStuff()``.
+* In the above code, the function was called for the first three statements, but not for the last one. This is because if ``b=False``, then the output will be False regardless of the boolean value of ``DoStuff()``. Therefore, it does not need read past the ``&&`` symbols, thus does not need to run the function ``DoStuff()``.
 
 ---
 <a name="03.4"></a>
@@ -187,6 +189,79 @@ int howManyBytesInAnInteger = sizeof(int);
     }
     ```
 
+---
+<a name="03.5"></a>
+### 3.5 - Pattern Matching with Switch Statements
+* Similar to pattern matching with if-else statements above, with switch statements we can do a similar check:
+```C#
+string path = @"C:/Users/VINUS/Documents/35_CSHARP/c-sharp-notes/code/Chapter03";
+Write("Press R for read-only or W for writeable: ");
+
+ConsoleKeyInfo key = ReadKey();
+WriteLine();
+Stream? s;
+
+if (key.Key == ConsoleKey.R)
+{
+    s = File.Open(
+    Path.Combine(path, "file.txt"),
+    FileMode.OpenOrCreate,
+    FileAccess.Read);
+}
+else
+{
+    s = File.Open(
+    Path.Combine(path, "file.txt"),
+    FileMode.OpenOrCreate,
+    FileAccess.Write);
+}
+
+string message;
+
+switch (s)
+{
+    case FileStream writeableFile when s.CanWrite:
+        // If s.CanWrite is true (i.e. it is a write-able file)
+        // and it is of class FileStream
+        // then use writeableFile as the local variable of type FileStream (Class).
+        message = "The stream is a file that I can write to.";
+        break;
+    case FileStream readOnlyFile:
+        // Otherwise, if it's a FileStream then 
+        // it is a readOnlyFile
+        message = "The stream is a read-only file.";
+        break;
+    case MemoryStream ms:
+        // If its a Memory stream then this is satisfied
+        message = "The stream is a memory address.";
+        break;
+    default: 
+        // This is always evaluated last despite its current position
+        message = "The stream is some other type.";
+        break;
+    case null:
+        // If its null then this is satisfied
+        message = "The stream is null.";
+        break;
+```
+#### Understanding the Code
+* The variable ``s`` can be declared as any ``Stream`` i.e. ``FileStream`` or ``MemoryStream``.
+* However, we use the stream ``s`` to open a file, which returns a ``FileStream``.
+* The user has the choice to make this ``FileStream`` either Write-able or Read-able.
+* Therefore, as the code is now, we can only statisfy case 1 and 2.
+* To understand the syntax, read the comments below each case condition in the code above.
+* The ``when`` keyword is used to perform more specific pattern matching; in the first case statement, ``s`` will only be a match if the stream is a ``FileStream`` and its ``CanWrite`` property is true.
+
+#### Comments
+* As you can see the matching doesn't have to be a literal (i.e. case 1, case "a", etc.) - we are able to match with conditions/patterns.
+* The order of switch cases matters, because if a preceding case covers the condition of a succeeding case, then the succeeding case will be unreachable. 
+* In the code above, if case 1 (``FileStream`` and ``CanWrite``) and case 2 (``FileStream``) were swapped, then case 1 will never be reached because case 2 will be evaluated first, and thus since all ``FileStream`` and ``Write`` will staisfy the first condition of is it a ``FileStream``, it will never satisfy the second condition.
+
+
+
+---
+<a name="03.6"></a>
+### 3.6 - Switch Expressions using Lambda
 
 
 
