@@ -303,6 +303,14 @@ The while loop checks the condition then runs the statement, whereas the do-whil
 
 <details>
 <summary><b>2. What does a for-each loop do?</b></summary>
-<br>
-The while loop checks the condition then runs the statement, whereas the do-while loop, runs the statment first then check if the condition is still true.
+
+* It will iterate through an array/collection (sequences) - but the items are read-only
+
+```C#
+string[] names = { "Adam", "Barry", "Charlie" };
+foreach (string name in names)
+{
+WriteLine($"{name} has {name.Length} characters.");
+}
+```
 <br><br></details>
