@@ -649,6 +649,9 @@ WriteLine("I could not parse the input.");
 * The ``IEnumerable`` interface. It must have the correct methods with the correct signatures even if the object does not actually implement the interface.
 <br><br></details>
 
+<details>
+<summary><b>
+
 17. What will happen if this code executes? What code could you add (don't change any of the preceding code) to warn us about the
 problem?
     ```C#
@@ -663,6 +666,10 @@ problem?
 * The max value of a byte is 255, therefore, the above code will go into an infinite loop since the local variable ``i`` will never reach ``499``. The value ``i`` will keep cycling through 0-255.
 * If the ``check`` keyword is used, an overflow exception is thrown.
 <br><br></details>
+
+
+<details>
+<summary><b>
 
 18. FizzBuzz is a group word game for children to teach them about division. Players take turns to count incrementally, replacing any number divisible by three with the word fizz, any number divisible by five with the word buzz, and any number divisible by both with fizzbuzz.
 
@@ -694,6 +701,8 @@ Create a console application in Chapter03 named Exercise03 that outputs a simula
 
 <br><br></details>
 
+<details>
+<summary><b>
 
 19. Create a console application that asks the user for two numbers in the range 0-255 and then divides the first number by the second
 </b></summary>
@@ -708,6 +717,8 @@ Create a console application in Chapter03 named Exercise03 that outputs a simula
     ```
 <br><br></details>
 
+<details>
+<summary><b>
 
 20. Write exception handlers to catch any thrown errors (continued from Q19).
 </b></summary>
@@ -733,6 +744,9 @@ Create a console application in Chapter03 named Exercise03 that outputs a simula
     ```
 <br><br></details>
 
+<details>
+<summary><b>
+    
 21. What are the values of x and y after the following statement executes? ```x = 3; y = 2 + ++x;```
 
 </b></summary>
