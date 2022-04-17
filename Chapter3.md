@@ -11,8 +11,9 @@ Return [Home](README.md)
 * [3.6 - Switch Expressions using Lambda](#03.6)
 * [3.7 - How does a For-each Loop Work?](#03.7)
 * [3.8 - Casting Numbers (Implicitly and Explicitly)](#03.8)
-* [3.9 - Converting to String](#03.9)
-* [3.14 - Question & Answer](#03.14)
+* [3.9 - Converting to\\from String](#03.9)
+* [3.10 - Handling Exceptions](#03.10)
+* [3.11 - Question & Answer](#03.11)
 
 The code for this tutorial can be found in ``code/Chapter03``
 
@@ -117,7 +118,7 @@ int howManyBytesInAnInteger = sizeof(int);
     int d = ++c; // increment c before assigning it
     WriteLine($"c is {c}, d is {d}");
     ```
-* Ouput:
+* Output:
     ```
     c is 4, d is 4
     ```
@@ -250,7 +251,7 @@ switch (s)
 * The variable ``s`` can be declared as any ``Stream`` i.e. ``FileStream`` or ``MemoryStream``.
 * However, we use the stream ``s`` to open a file, which returns a ``FileStream``.
 * The user has the choice to make this ``FileStream`` either Write-able or Read-able.
-* Therefore, as the code is now, we can only statisfy case 1 and 2.
+* Therefore, as the code is now, we can only satisfy case 1 and 2.
 * To understand the syntax, read the comments below each case condition in the code above.
 * The ``when`` keyword is used to perform more specific pattern matching; in the first case statement, ``s`` will only be a match if the stream is a ``FileStream`` and its ``CanWrite`` property is true.
 
@@ -340,7 +341,7 @@ switch (s)
     WriteLine(d); // d is 9 losing the .8 part
     ```
 * The cast chops off everything after the decimal (does not round).
-* You may get wierd results when casting explicitly, because some information is lost during the casting. For example from ``long`` to ``int``:
+* You may get weird results when casting explicitly, because some information is lost during the casting. For example from ``long`` to ``int``:
     ```C#
     long e = 10;
     int f = (int)e;
@@ -349,7 +350,7 @@ switch (s)
     f = (int)e;
     WriteLine($"e is {e:N0} and f is {f:N0}");
     ```
-* Returns the follwoing:
+* Returns the following:
     ```
     e is 10 and f is 10
     e is 9,223,372,036,854,775,807 and f is -1
@@ -460,8 +461,8 @@ switch (s)
 * The above code, will still catch other exceptions with the general catch condition.
 
 ---
-<a name="03.14"></a>
-### 3.14 - Question & Answer
+<a name="03.11"></a>
+### 3.11 - Question & Answer
 <br>
 
 <details>
@@ -469,7 +470,7 @@ switch (s)
 
 1. What is the difference between a while loop and a do-while loop?</b></summary>
 <br>
-The while loop checks the condition then runs the statement, whereas the do-while loop, runs the statment first then check if the condition is still true.
+The while loop checks the condition then runs the statement, whereas the do-while loop, runs the statement first then check if the condition is still true.
 <br><br></details>
 
 
@@ -570,7 +571,7 @@ WriteLine("I could not parse the input.");
 </b></summary>
 
 * Using the ``unchecked`` keyword: It cycles back to the lowest integer value. i.e. ``int x = int.MaxValue + 1`` would output ``-2147483648``
-* Using the ``checked`` keyword: Overflow excpetion thrown (at compile time).
+* Using the ``checked`` keyword: Overflow exception thrown (at compile time).
 <br><br></details>
 
 
@@ -593,7 +594,7 @@ WriteLine("I could not parse the input.");
 
 * ``break`` break exits the loop
 * ``return`` ends current method call and continue executing after the method call.
-* ``continue`` carries onto the next condition evaluation (whether while, for loop or switch)  or next interation of loop.
+* ``continue`` carries onto the next condition evaluation (whether while, for loop or switch)  or next interaction of loop.
 <br><br></details>
 
 
@@ -642,7 +643,7 @@ WriteLine("I could not parse the input.");
 <summary><b>
 
 
-16. What interface must an object implement to be enumerated over by using the foreach statement?
+16. What interface must an object implement to be enumerated over by using the for-each statement?
 </b></summary>
 
 * The ``IEnumerable`` interface. It must have the correct methods with the correct signatures even if the object does not actually implement the interface.
