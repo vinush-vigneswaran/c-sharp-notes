@@ -222,6 +222,18 @@ Output:
 sum of the two integer value : 3
 sum of the three integer value : 6
 ```
+
+## Stack Trace
+A list of the methods that were called before the exception was thrown.
+
+## Exception
+
+* An exception is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions.
+* **Throwing an exception :** this is when there is an error in the method. The method (has a default setting) which creates an object (called an exception object) and "throws" it to the runtime system. 
+* **Exception handling :** The runtime system goes back through the call stack, looking for a method that contains a block of code that can handle the exception.
+* **Catch the exception:** A chosen exception handler will "catch the exception", and act accordingly.
+* If there are no code that catches the exception, then the runtime system terminates, and outputs the error and stack trace.
+
 <a name="3"></a>
 # C# and Visual Studio Code -specific Tips
 
