@@ -4,8 +4,8 @@
 ## Contents
 Return [Home](README.md)
 * [4.1 - Don't Repeat Yourself (DRY)](#04.1)
-* [4.2 - Post- and Pre- Incrementors](#04.2)
-* [4.3 - Short-circuiting Boolean Operators](#04.3)
+* [4.2 - Factorials with Recursion](#04.2)
+* [4.3 - XML Comments](#04.3)
 
 
 
@@ -46,7 +46,8 @@ The code for this tutorial can be found in ``code/Chapter04``
     {
         public static void Main(string[] args)
         {
-            WriteLine(CalculateTax(1000, "GB"));
+            decimal taxToPay = CalculateTax(amount: 1000, twoLetterRegionCode: "GB");
+            WriteLine($"You must pay {taxToPay} in tax.");
         }
         static decimal CalculateTax(
         decimal amount, string twoLetterRegionCode)
@@ -83,18 +84,115 @@ The code for this tutorial can be found in ``code/Chapter04``
 * As you can see for ``GB`` case it would have a rate of ``0.02M`` because there is no ``break``, and the program flows to the next case.
 
 
+---
+<a name="04.2"></a>
+### 4.2 - Factorials with Recursion
+* Use recursion to find factorials:
+    ```C#
+    static int Factorial(int i) 
+    {
+        if (i < 1)
+        {
+            return 0;
+        }
+        else if (i == 1)
+        {
+            return 1;
+        }
+        else
+        {
+            return i * Factorial(i - 1);
+        }
+    }
+    ```
+* As you can see the edge case of ``i < 0`` is covered. 
+* However, if the output value is very high (e.g. ``Factorial(45)``), that it exceeds the ``int`` range, then remember that it cycles back to negative values a.k.a overflows. According to our function, the output of ``Factorial(45) = 0`` which is incorrect. We can make it throw an exception by using ``checked``.
+    ```C#
+    ....
+    else
+    checked
+    {
+        return i * Factorial(i - 1);
+    }
+    ```
+* Lets write another function to print out the first 20 factorials. Also, we will now handle ``OverflowException``:
+    ```C#
+        static void Main(string[] args)
+        {
+            RunFactorial(20); 
+        }
+        static void RunFactorial(int nVals)
+        {
+            for (int i = 1; i <= nVals; i++)
+                try
+                {
+                    WriteLine($"{i}! = {Factorial(i):N0}");
+                }
+                catch (System.OverflowException)
+                {
+                    WriteLine($"{i}! is too big for a 32-bit integer.");
+                }
+        }
+        static int Factorial(int i)
+        {
+            if (i < 1)
+            {
+                return 0;
+            }
+            else if (i == 1)
+            {
+                return 1;
+            }
+            else
+            checked
+            {
+                return i * Factorial(i - 1);
+            }
+        }
+    ```
+* The output:
+    ```
+    1! = 1
+    2! = 2
+    3! = 6
+    4! = 24
+    5! = 120
+    6! = 720
+    7! = 5,040
+    8! = 40,320
+    9! = 362,880
+    10! = 3,628,800
+    11! = 39,916,800
+    12! = 479,001,600
+    13! is too big for a 32-bit integer.
+    14! is too big for a 32-bit integer.
+    15! is too big for a 32-bit integer.
+    16! is too big for a 32-bit integer.
+    17! is too big for a 32-bit integer.
+    18! is too big for a 32-bit integer.
+    19! is too big for a 32-bit integer.
+    20! is too big for a 32-bit integer.
+    ```
+---
+<a name="04.3"></a>
+### 4.3 - XML Comments
+* Triple slash for XML comments which can be seen by hovering on the function when used.
+* For a Cardinal to Ordinal function, on top of the function we can put an XML comment:
+    ```C#
+    /// <summary>
+    /// Pass a 32-bit integer and it will be converted into its ordinal equivalent.
+    /// </summary>
+    /// <param name="number">Number is a cardinal value e.g. 1, 2, 3, and so on.</param>
+    /// <returns>Number as an ordinal value e.g. 1st, 2nd, 3rd, and so on.</returns>
+    static string CardinalToOrdinal(int number) 
+        {
+    ....
+    ```
+* Now, if you hover on the function name when you use ``WriteLine(CardinalToOrdinal(i));``, you will see something like this:
 
+> ![hover](hover.png)
 
-
-
-
-
-Going through the Tricentis tutorial, and also creating my own scenarios for the web framework - and playing around.
-
-
-
-
-
+* [Click here for the code example](https://github.com/vinush-vigneswaran/c-sharp-notes/blob/main/code/Chapter04/Cardinal2OrdinalApp/Program.cs)
 
 
 

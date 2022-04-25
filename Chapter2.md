@@ -175,7 +175,7 @@ public class Program
     {
         Console.WriteLine("This is main functIon");
 
-        // Create an object to run funcitons
+        // Create an object to run functions
         Car myCar = new Car("Toyota", "Prius");
         
         // Now I can access a non-static function
