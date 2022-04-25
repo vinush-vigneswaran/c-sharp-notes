@@ -190,7 +190,7 @@ The code for this tutorial can be found in ``code/Chapter04``
     ```
 * Now, if you hover on the function name when you use ``WriteLine(CardinalToOrdinal(i));``, you will see something like this:
 
-> ![hover](hover.png)
+> ![hover](media/hover.png)
 
 * [Click here for the code example](https://github.com/vinush-vigneswaran/c-sharp-notes/blob/main/code/Chapter04/Cardinal2OrdinalApp/Program.cs)
 
