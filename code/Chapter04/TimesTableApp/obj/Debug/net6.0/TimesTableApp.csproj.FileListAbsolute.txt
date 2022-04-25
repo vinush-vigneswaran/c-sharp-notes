@@ -1,0 +1,15 @@
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\obj\Debug\net6.0\TimesTableApp.csproj.AssemblyReference.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\obj\Debug\net6.0\TimesTableApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\obj\Debug\net6.0\TimesTableApp.AssemblyInfoInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\obj\Debug\net6.0\TimesTableApp.AssemblyInfo.cs
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\obj\Debug\net6.0\TimesTableApp.csproj.CoreCompileInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\bin\Debug\net6.0\TimesTableApp.exe
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\bin\Debug\net6.0\TimesTableApp.deps.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\bin\Debug\net6.0\TimesTableApp.runtimeconfig.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\bin\Debug\net6.0\TimesTableApp.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\bin\Debug\net6.0\TimesTableApp.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\obj\Debug\net6.0\TimesTableApp.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\obj\Debug\net6.0\refint\TimesTableApp.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\obj\Debug\net6.0\TimesTableApp.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\obj\Debug\net6.0\TimesTableApp.genruntimeconfig.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\TimesTableApp\obj\Debug\net6.0\ref\TimesTableApp.dll

@@ -1,0 +1,16 @@
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\bin\Debug\net5.0\Cardinal2OrdinalApp.exe
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\bin\Debug\net5.0\Cardinal2OrdinalApp.deps.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\bin\Debug\net5.0\Cardinal2OrdinalApp.runtimeconfig.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\bin\Debug\net5.0\Cardinal2OrdinalApp.runtimeconfig.dev.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\bin\Debug\net5.0\Cardinal2OrdinalApp.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\bin\Debug\net5.0\Cardinal2OrdinalApp.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\obj\Debug\net5.0\Cardinal2OrdinalApp.csproj.AssemblyReference.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\obj\Debug\net5.0\Cardinal2OrdinalApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\obj\Debug\net5.0\Cardinal2OrdinalApp.AssemblyInfoInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\obj\Debug\net5.0\Cardinal2OrdinalApp.AssemblyInfo.cs
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\obj\Debug\net5.0\Cardinal2OrdinalApp.csproj.CoreCompileInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\obj\Debug\net5.0\Cardinal2OrdinalApp.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\obj\Debug\net5.0\refint\Cardinal2OrdinalApp.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\obj\Debug\net5.0\Cardinal2OrdinalApp.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\obj\Debug\net5.0\Cardinal2OrdinalApp.genruntimeconfig.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\Cardinal2OrdinalApp\obj\Debug\net5.0\ref\Cardinal2OrdinalApp.dll

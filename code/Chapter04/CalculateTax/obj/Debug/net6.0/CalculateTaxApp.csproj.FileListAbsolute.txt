@@ -1,0 +1,15 @@
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\bin\Debug\net6.0\CalculateTaxApp.exe
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\bin\Debug\net6.0\CalculateTaxApp.deps.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\bin\Debug\net6.0\CalculateTaxApp.runtimeconfig.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\bin\Debug\net6.0\CalculateTaxApp.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\bin\Debug\net6.0\CalculateTaxApp.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\obj\Debug\net6.0\CalculateTaxApp.csproj.AssemblyReference.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\obj\Debug\net6.0\CalculateTaxApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\obj\Debug\net6.0\CalculateTaxApp.AssemblyInfoInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\obj\Debug\net6.0\CalculateTaxApp.AssemblyInfo.cs
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\obj\Debug\net6.0\CalculateTaxApp.csproj.CoreCompileInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\obj\Debug\net6.0\CalculateTaxApp.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\obj\Debug\net6.0\refint\CalculateTaxApp.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\obj\Debug\net6.0\CalculateTaxApp.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\obj\Debug\net6.0\CalculateTaxApp.genruntimeconfig.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CalculateTax\obj\Debug\net6.0\ref\CalculateTaxApp.dll
