@@ -1,0 +1,16 @@
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\bin\Debug\net5.0\ExploringDebugging.exe
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\bin\Debug\net5.0\ExploringDebugging.deps.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\bin\Debug\net5.0\ExploringDebugging.runtimeconfig.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\bin\Debug\net5.0\ExploringDebugging.runtimeconfig.dev.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\bin\Debug\net5.0\ExploringDebugging.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\bin\Debug\net5.0\ExploringDebugging.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\obj\Debug\net5.0\ExploringDebugging.csproj.AssemblyReference.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\obj\Debug\net5.0\ExploringDebugging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\obj\Debug\net5.0\ExploringDebugging.AssemblyInfoInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\obj\Debug\net5.0\ExploringDebugging.AssemblyInfo.cs
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\obj\Debug\net5.0\ExploringDebugging.csproj.CoreCompileInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\obj\Debug\net5.0\ExploringDebugging.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\obj\Debug\net5.0\refint\ExploringDebugging.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\obj\Debug\net5.0\ExploringDebugging.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\obj\Debug\net5.0\ExploringDebugging.genruntimeconfig.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\ExploringDebugging\obj\Debug\net5.0\ref\ExploringDebugging.dll

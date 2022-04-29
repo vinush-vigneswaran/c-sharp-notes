@@ -6,7 +6,7 @@ Return [Home](README.md)
 * [4.1 - Don't Repeat Yourself (DRY)](#04.1)
 * [4.2 - Factorials with Recursion](#04.2)
 * [4.3 - XML Comments](#04.3)
-
+* [4.4 - Lambdas: Imperative vs Declarative](#04.4)
 
 
 * [4.15 - Question & Answer](#04.11)
@@ -195,7 +195,77 @@ The code for this tutorial can be found in ``code/Chapter04``
 * [Click here for the code example](https://github.com/vinush-vigneswaran/c-sharp-notes/blob/main/code/Chapter04/Cardinal2OrdinalApp/Program.cs)
 
 
+---
+<a name="04.4"></a>
+### 4.4 - Lambdas: Imperative vs Declarative
+* Lambda expressions are used to create an anonymous function.
+#### **Anonymous function :** 
+* This is done using the "lambda declaration operator": ``=>``
+* Expression Lambda:
+    ```
+    (input-parameters) => expression
+    ```
+* Statement Lambda:
+    ```
+    (input-parameters) => { <sequence-of-statements> }
+    ```
+#### **Imperative vs Declarative**
+* Let's look at code to generate the nth term of Fibonacci sequence:
+* The imperative style is:
+    ```C#
+    static int FibImperative(int term)
+    {
+        if (term == 1)
+        {
+            return 0;
+        }
+        else if (term == 2)
+        {
+            return 1;
+        }
+        else
+        {
+            return FibImperative(term - 1) + FibImperative(term - 2);
+        }
+    }
+    ```
+* The declarative style is:
+    ```C#
+    static int FibFunctional(int term) =>
+    term switch
+    {
+        1 => 0,
+        2 => 1,
+        _ => FibFunctional(term - 1) + FibFunctional(term - 2)
+    };
+    ```
+* The style above is known as "expression-bodied function members", where it is very concise and readable (using ``=>``). Examples, include:
+    ```C#
+    ....
+   public override string ToString() => $"{fname} {lname}".Trim();
+    ....
+   public void DisplayName() => Console.WriteLine(ToString());
+    ```
 
+---
+<a name="04.5"></a>
+### 4.5 - Debugging during development
+* Breakpoints allow us to mark a line of code that we would like to pause at to inspect the program state and find bugs.
+* Debug Environment:
+1. Set a ``breakpoint`` by either **Debug | Toggle Breakpoint** or ``press F9`` or move to the left margin of that line to set a red circle.
+2. Navigate to **Debug | Start Debugging** or **press F5**.
+3. ``Break mode`` is when Visua Studio starts the console, but then pauses at the breakpoint
+4. The windows can be accessed through **Debug > Windows**, then: 
+    * ``Locals`` : Shows current values of all local variables.
+    * ``Watch`` : Shows any watch expressions you have defined.
+5. At the top the toolbar will change to debug mode.
+6. The next line is highlight in yellow.
+
+* This is the toolbar labels:
+    * ``continue``: This button will continue running the program from the current position until it ends or hits another breakpoint.
+    * ``watch 1``: Shows the value of variables and expressions that you manually enter.
+    * 
+> ![toolbar](media/toolbar.png)
 
 
 
@@ -205,10 +275,37 @@ The code for this tutorial can be found in ``code/Chapter04``
 <br>
 
 <details>
-<summary><b> 1. What is the difference between a while loop and a do-while loop?</b></summary>
+<summary><b> 1. What is a functional language? and show example.</b></summary>
 <br>
 
-The while loop checks the condition then runs the statement, whereas the do-while loop, runs the statement first then check if the condition is still true.
+* Function languages evolved from lambda calculus (computational system based on functions)
+* Some of the important attributes are modularity, immutability and maintainability.
+* Example of functional-first program is F#, and purely functional is Haskell.
+* Example of Pure Function:
+    ```
+    Function Pure(a,b)
+    {
+        return a+b;
+    }
+    ```
+* Example of Impure Functions:
+    ```
+    int z;
+    function notPure(){
+        z = z+10;
+    }
+    ```
+<br><br>
+</details>
+
+
+<details>
+<summary><b> 2. Describe the important attributes of a functional language</b></summary>
+<br>
+
+* ``Modularity``: Similar to C#, we can break down large complex codes into reusable smaller pieces of code.
+* ``Immutability``: With functional languages, data values of variables inside a function cannot be changed instead the new data balue has to be created from existing ones. This reduces bugs.
+* ``Maintainability``: Code is cleaner and clearer.
 <br><br>
 </details>
 

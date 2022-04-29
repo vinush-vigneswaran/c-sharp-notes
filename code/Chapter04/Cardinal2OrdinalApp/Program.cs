@@ -2,7 +2,7 @@
 
 namespace Cardinal2OrdinalApp
 {
-    internal class Program
+    public class CardinalToOrdinalConvertor
     {
         static void Main(string[] args)
         {
@@ -18,7 +18,7 @@ namespace Cardinal2OrdinalApp
         /// </summary>
         /// <param name="number">Number is a cardinal value e.g. 1, 2, 3, and so on.</param>
         /// <returns>Number as an ordinal value e.g. 1st, 2nd, 3rd, and so on.</returns>
-        static string CardinalToOrdinal(int number) 
+        public static string CardinalToOrdinal(int number) 
         {
             string ordinalSuffix = "";
 

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ExploringDebugging/1.0.0": {
+        "runtime": {
+          "ExploringDebugging.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ExploringDebugging/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

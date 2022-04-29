@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ImperativeVsDeclarative/1.0.0": {
+        "dependencies": {
+          "Cardinal2OrdinalApp": "1.0.0"
+        },
+        "runtime": {
+          "ImperativeVsDeclarative.dll": {}
+        }
+      },
+      "Cardinal2OrdinalApp/1.0.0": {
+        "runtime": {
+          "Cardinal2OrdinalApp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ImperativeVsDeclarative/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cardinal2OrdinalApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
