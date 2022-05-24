@@ -268,6 +268,8 @@ The code for this tutorial can be found in ``code/Chapter04``
 > ![toolbar](media/toolbar.png)
 
 
+stuff
+
 
 ---
 <a name="04.11"></a>
