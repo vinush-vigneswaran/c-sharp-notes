@@ -1,0 +1,16 @@
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\bin\Debug\net5.0\InstrumentingLogging.exe
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\bin\Debug\net5.0\InstrumentingLogging.deps.json
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\bin\Debug\net5.0\InstrumentingLogging.runtimeconfig.json
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\bin\Debug\net5.0\InstrumentingLogging.runtimeconfig.dev.json
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\bin\Debug\net5.0\InstrumentingLogging.dll
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\bin\Debug\net5.0\InstrumentingLogging.pdb
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\obj\Debug\net5.0\InstrumentingLogging.csproj.AssemblyReference.cache
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\obj\Debug\net5.0\InstrumentingLogging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\obj\Debug\net5.0\InstrumentingLogging.AssemblyInfoInputs.cache
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\obj\Debug\net5.0\InstrumentingLogging.AssemblyInfo.cs
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\obj\Debug\net5.0\InstrumentingLogging.csproj.CoreCompileInputs.cache
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\obj\Debug\net5.0\InstrumentingLogging.dll
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\obj\Debug\net5.0\refint\InstrumentingLogging.dll
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\obj\Debug\net5.0\InstrumentingLogging.pdb
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\obj\Debug\net5.0\InstrumentingLogging.genruntimeconfig.cache
+C:\Users\vinush.vigneswaran\Documents\c-sharp\c-sharp-notes\code\Chapter04\InstrumentingLogging\obj\Debug\net5.0\ref\InstrumentingLogging.dll

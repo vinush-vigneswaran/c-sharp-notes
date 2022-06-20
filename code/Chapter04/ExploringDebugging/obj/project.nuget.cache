@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8Mg1sa6q6f0mMHB4jMdVTqZs5sD7mMxlp/p+OxPeL5I27udNf11Fds3LcWsRjjetCy+9OMMT8E7J9AKMKDrNCw==",
+  "dgSpecHash": "5lRgIaugW01BwTaEyLNFB+hcbsj95ei1MrIzxnqADRkWhjRnzztjp2s30u4ZecAJvFWEOLvveBwjSWGa4AMLSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\VINUS\\Documents\\35_CSHARP\\c-sharp-notes\\code\\Chapter04\\ExploringDebugging\\ExploringDebugging.csproj",
+  "projectFilePath": "C:\\Users\\vinush.vigneswaran\\Documents\\c-sharp\\c-sharp-notes\\code\\Chapter04\\ExploringDebugging\\ExploringDebugging.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
