@@ -254,21 +254,55 @@ The code for this tutorial can be found in ``code/Chapter04``
 * Debug Environment:
 1. Set a ``breakpoint`` by either **Debug | Toggle Breakpoint** or ``press F9`` or move to the left margin of that line to set a red circle.
 2. Navigate to **Debug | Start Debugging** or **press F5**.
-3. ``Break mode`` is when Visua Studio starts the console, but then pauses at the breakpoint
+3. ``Break mode`` is when Visual Studio starts the console, but then pauses at the breakpoint
 4. The windows can be accessed through **Debug > Windows**, then: 
     * ``Locals`` : Shows current values of all local variables.
     * ``Watch`` : Shows any watch expressions you have defined.
+    * ``Call Stack``: Shows stack of function calls.
 5. At the top the toolbar will change to debug mode.
 6. The next line is highlight in yellow.
 
 * This is the toolbar labels:
     * ``continue``: This button will continue running the program from the current position until it ends or hits another breakpoint.
-    * ``watch 1``: Shows the value of variables and expressions that you manually enter.
-    * 
+    * ``restart``: Restarts the program and debugging from the beginning.
+    * ``Step into``: This steps into the method, so that you can look through every line in the method.
+    * ``Step over``: This runs the method in one go - you do not step into the method line-by-line.
+    * ``Step out``: This advances the debugger out of the current function
 > ![toolbar](media/toolbar.png)
 
 
-stuff
+---
+<a name="04.5"></a>
+### 4.6 - Logging during development
+Some framework for logging include: 
+* Apache log4net
+* NLog
+* Serilog
+
+There are also included classes to add simple logging to the code:
+* ``Debug`` class is used to log only during development.
+* ``Trace`` class is used to add logging that is used during both development and runtime.
+
+How it works:
+* Both of these classes write to a *trace* listener, there are many provided by .NET including one that outputs to the console.
+* ``DefaultTraceListener`` class is configured to output to the DEBUG CONSOLE window
+
+You can use the following code to log into a text file:
+```C#
+    // write to a text file in the project folder
+
+    Trace.Listeners.Add(new TextWriterTraceListener(File.CreateText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "log.txt"))));
+
+    // text writer is buffered, so this option calls
+    // Flush() on all listeners after writing
+    Trace.AutoFlush = true;
+
+    Debug.WriteLine("Debug says, I am watching!");
+    Trace.WriteLine("Trace says, I am watching!");
+```
+
+* ``Debug``: Select Debug in the Solution Configurations **dropdown** list and then run the console app by navigating to ``Debug | Start Debugging.``
+* ``Release``: Run the release configuration of the console app by navigating to ``Debug | Start Without Debugging.``
 
 
 ---
