@@ -7,7 +7,8 @@ namespace Calculator
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            double answer = Packt.Calculator.Add(3.0, 2.5);
+            Packt.CalculatorLib calculate = new();
+            double answer = calculate.Add(3.0, 2.5);
             Console.WriteLine($"Answer is {answer}");
         }
 
@@ -16,11 +17,11 @@ namespace Calculator
 
 namespace Packt
 {
-    public class Calculator
+    public class CalculatorLib
     {
-        public static double Add(double a, double b)
+        public double Add(double a, double b)
         {
-            return a * b;
+            return a + b;
         }
     }
 }

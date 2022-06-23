@@ -272,7 +272,7 @@ The code for this tutorial can be found in ``code/Chapter04``
 
 
 ---
-<a name="04.5"></a>
+<a name="04.6"></a>
 ### 4.6 - Logging during development
 Some framework for logging include: 
 * Apache log4net
@@ -303,6 +303,55 @@ You can use the following code to log into a text file:
 
 * ``Debug``: Select Debug in the Solution Configurations **dropdown** list and then run the console app by navigating to ``Debug | Start Debugging.``
 * ``Release``: Run the release configuration of the console app by navigating to ``Debug | Start Without Debugging.``
+
+
+---
+<a name="04.7"></a>
+### 4.7 - Writing Unit Tests
+* In the example we use XUnit, by creating an XUnit project (as CalculatorTests) and adding a reference to the project we are testing (i.e. Calculator).
+* A unit test consists of three parts:
+    * ``Arrange`` : This part decleares and instantiates variables for input/desired output. 
+    * ``Act`` : This part will execute the unit you are testing (i.e. the method which we are trying to test will get called).
+    * ``Assert`` : This will make an assertion that the method output is the desired output.
+
+
+---
+<a name="04.8"></a>
+### 4.8 - Throwing & Catching Exceptions and the Call Stack 
+* **Call Stack**
+    * The call stack is shown from the most recent function call, all the way up every function up until Main().
+    * If there is an exception thrown at the most recent function call, it goes up the call stack looking for a try-catch block to handle the exception.
+    * If there are no try-catch block then .NET outputs the exception and the call stack details.
+
+* **Rethrowing an Exception**
+    * To throw the caught exception with its original call stack, call ``throw``.
+    * To rethrow the caught exception as though it was at the current level of the stack use ``throw ex``. This is poor practice because you lose information for debugging.
+    * To wrap the current exception into another exception that includes more info (for the caller to understand the issue). In this case, you can use: ``innerException`` parameter.
+
+Examples:
+```C#
+    try
+    {
+    Gamma();
+    }
+        catch (IOException ex)
+    {
+        LogException(ex);
+
+        // throw the caught exception as if it happened here
+        // this will lose the original call stack
+        throw ex;
+
+        // rethrow the caught exception and retain its original call stack
+        throw;
+
+        // throw a new exception with the caught exception nested within it
+        throw new InvalidOperationException(
+        message: "Calculation had invalid values. See inner exception for why.",
+        innerException: ex);
+    }
+```
+
 
 
 ---
@@ -342,6 +391,81 @@ You can use the following code to log into a text file:
 * ``Modularity``: Similar to C#, we can break down large complex codes into reusable smaller pieces of code.
 * ``Immutability``: With functional languages, data values of variables inside a function cannot be changed instead the new data balue has to be created from existing ones. This reduces bugs.
 * ``Maintainability``: Code is cleaner and clearer.
+<br><br>
+</details>
+
+
+<details>
+<summary><b> 3. What does the C# keyword void mean?</b></summary>
+<br>
+
+* ``void`` means that the function/method does not return anything.
+<br><br>
+</details>
+
+
+<details>
+<summary><b> 4. In Visual Studio Code or Visual Studio, what is the difference between pressing F5, Ctrl or Cmd + F5, Shift + F5, and Ctrl or Cmd + Shift + F5?</b></summary>
+<br>
+
+* ``F5`` runs the code in debug mode.
+* ``Ctrl+F5`` runs the code without debug mode.
+* The same in VS with an additional ``Shift`` command.
+<br><br>
+</details>
+
+<details>
+<summary><b> 5. Where does the Trace.WriteLine method write its output to?</b></summary>
+<br>
+
+* ``Trace.WriteLine`` : Writes its output to the ``debug`` output during development and runtime.
+<br><br>
+</details>
+
+<details>
+<summary><b> 6. What are the five trace levels?</b></summary>
+<br>
+
+* Trace Error
+* Trace Warning
+* Trace Info
+* Trace Verbose
+<br><br>
+</details>
+
+<details>
+<summary><b> 6. What is the difference between the Debug and Trace classes?</b></summary>
+<br>
+
+* ``Trace`` : Used to log during development and runtime
+* ``Debug`` : Used only to log during development
+<br><br>
+</details>
+
+
+<details>
+<summary><b> 7. When writing a unit test, what are the three "A"s?</b></summary>
+<br>
+
+* Arrange, Act and Assert
+<br><br>
+</details>
+
+<details>
+<summary><b> 8. When writing a unit test using xUnit, what attribute must you decorate the test methods with?</b></summary>
+<br>
+
+```C#
+[Fact]
+```
+<br><br>
+</details>
+
+<details>
+<summary><b> 9. What statement should you use to rethrow a caught exception named ex without losing the stack trace?</b></summary>
+<br>
+
+* ``throw``
 <br><br>
 </details>
 
