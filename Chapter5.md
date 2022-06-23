@@ -46,7 +46,7 @@ The code for this tutorial can be found in ``code/Chapter05``
 ---
 <a name="05.2"></a>
 ### 5.2 - Building class libraries
-
+* The idea of class libraries is to keep all the class definitions in one place, and then use them in your main console program as required.
 
 
 ---
