@@ -7,9 +7,11 @@ Return [Home](README.md)
 * [4.2 - Factorials with Recursion](#04.2)
 * [4.3 - XML Comments](#04.3)
 * [4.4 - Lambdas: Imperative vs Declarative](#04.4)
-
-
-* [4.15 - Question & Answer](#04.11)
+* [4.5 - Debugging during development](#04.5)
+* [4.6 - Logging during development](#04.6)
+* [4.7 - Writing Unit Tests](#04.7)
+* [4.8 - Throwing & Catching Exceptions and the Call Stack](#04.8)
+* [4.9 - Question & Answer](#04.9)
 
 The code for this tutorial can be found in ``code/Chapter04``
 
@@ -352,11 +354,9 @@ Examples:
     }
 ```
 
-
-
 ---
-<a name="04.11"></a>
-### 4.11 - Question & Answer
+<a name="04.9"></a>
+### 4.9 - Question & Answer
 <br>
 
 <details>
