@@ -10,6 +10,7 @@ Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 * [Ch2 - The C# Language](Chapter2.md)
 * [Ch3 - Controlling Flow, Converting Types, and Handling Exceptions](Chapter3.md)
 * [Ch4 - Writing, Debugging, and Testing Functions](Chapter4.md)
+* [Ch5 - Object-Oriented Programming](Chapter5.md)
 * [ChX - Key Definitions](Keywords.md)
 
 ---
