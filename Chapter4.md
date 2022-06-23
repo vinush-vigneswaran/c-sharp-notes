@@ -398,7 +398,7 @@ Examples:
 <summary><b> 3. What does the C# keyword void mean?</b></summary>
 <br>
 
-* ``void`` means that the function/method does not return anything.
+* ``void`` means that the function/method has no return value.
 <br><br>
 </details>
 
@@ -407,9 +407,10 @@ Examples:
 <summary><b> 4. In Visual Studio Code or Visual Studio, what is the difference between pressing F5, Ctrl or Cmd + F5, Shift + F5, and Ctrl or Cmd + Shift + F5?</b></summary>
 <br>
 
-* ``F5`` runs the code in debug mode.
-* ``Ctrl+F5`` runs the code without debug mode.
-* The same in VS with an additional ``Shift`` command.
+* ``F5`` saves, compiles and runs the code in debug mode.
+* ``Ctrl+F5`` saves, compilesa and runs the code without debug mode.
+* ``Shift+F5`` stops running the debugger and the application.
+* ``Ctrl+Shift+F5`` restarts the application with the debugger.
 <br><br>
 </details>
 
@@ -417,7 +418,7 @@ Examples:
 <summary><b> 5. Where does the Trace.WriteLine method write its output to?</b></summary>
 <br>
 
-* ``Trace.WriteLine`` : Writes its output to the ``debug`` output during development and runtime.
+* ``Trace.WriteLine`` : Writes its output to any configured trace listeners,by default this would be the command line (can be configured to something else).
 <br><br>
 </details>
 
@@ -425,10 +426,11 @@ Examples:
 <summary><b> 6. What are the five trace levels?</b></summary>
 <br>
 
-* Trace Error
-* Trace Warning
-* Trace Info
-* Trace Verbose
+* 0: Off
+* 1: Trace Error
+* 2: Trace Warning
+* 3: Trace Info
+* 4: Trace Verbose
 <br><br>
 </details>
 
@@ -436,7 +438,7 @@ Examples:
 <summary><b> 6. What is the difference between the Debug and Trace classes?</b></summary>
 <br>
 
-* ``Trace`` : Used to log during development and runtime
+* ``Trace`` : Used to log during development and production
 * ``Debug`` : Used only to log during development
 <br><br>
 </details>
@@ -455,8 +457,13 @@ Examples:
 <br>
 
 ```C#
-[Fact]
+[Fact] 
 ```
+OR
+```C#
+[Theory] 
+```
+
 <br><br>
 </details>
 
