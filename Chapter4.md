@@ -7,9 +7,11 @@ Return [Home](README.md)
 * [4.2 - Factorials with Recursion](#04.2)
 * [4.3 - XML Comments](#04.3)
 * [4.4 - Lambdas: Imperative vs Declarative](#04.4)
-
-
-* [4.15 - Question & Answer](#04.11)
+* [4.5 - Debugging during development](#04.5)
+* [4.6 - Logging during development](#04.6)
+* [4.7 - Writing Unit Tests](#04.7)
+* [4.8 - Throwing & Catching Exceptions and the Call Stack](#04.8)
+* [4.9 - Question & Answer](#04.9)
 
 The code for this tutorial can be found in ``code/Chapter04``
 
@@ -254,24 +256,107 @@ The code for this tutorial can be found in ``code/Chapter04``
 * Debug Environment:
 1. Set a ``breakpoint`` by either **Debug | Toggle Breakpoint** or ``press F9`` or move to the left margin of that line to set a red circle.
 2. Navigate to **Debug | Start Debugging** or **press F5**.
-3. ``Break mode`` is when Visua Studio starts the console, but then pauses at the breakpoint
+3. ``Break mode`` is when Visual Studio starts the console, but then pauses at the breakpoint
 4. The windows can be accessed through **Debug > Windows**, then: 
     * ``Locals`` : Shows current values of all local variables.
     * ``Watch`` : Shows any watch expressions you have defined.
+    * ``Call Stack``: Shows stack of function calls.
 5. At the top the toolbar will change to debug mode.
 6. The next line is highlight in yellow.
 
 * This is the toolbar labels:
     * ``continue``: This button will continue running the program from the current position until it ends or hits another breakpoint.
-    * ``watch 1``: Shows the value of variables and expressions that you manually enter.
-    * 
+    * ``restart``: Restarts the program and debugging from the beginning.
+    * ``Step into``: This steps into the method, so that you can look through every line in the method.
+    * ``Step over``: This runs the method in one go - you do not step into the method line-by-line.
+    * ``Step out``: This advances the debugger out of the current function
 > ![toolbar](media/toolbar.png)
 
 
+---
+<a name="04.6"></a>
+### 4.6 - Logging during development
+Some framework for logging include: 
+* Apache log4net
+* NLog
+* Serilog
+
+There are also included classes to add simple logging to the code:
+* ``Debug`` class is used to log only during development.
+* ``Trace`` class is used to add logging that is used during both development and runtime.
+
+How it works:
+* Both of these classes write to a *trace* listener, there are many provided by .NET including one that outputs to the console.
+* ``DefaultTraceListener`` class is configured to output to the DEBUG CONSOLE window
+
+You can use the following code to log into a text file:
+```C#
+    // write to a text file in the project folder
+
+    Trace.Listeners.Add(new TextWriterTraceListener(File.CreateText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "log.txt"))));
+
+    // text writer is buffered, so this option calls
+    // Flush() on all listeners after writing
+    Trace.AutoFlush = true;
+
+    Debug.WriteLine("Debug says, I am watching!");
+    Trace.WriteLine("Trace says, I am watching!");
+```
+
+* ``Debug``: Select Debug in the Solution Configurations **dropdown** list and then run the console app by navigating to ``Debug | Start Debugging.``
+* ``Release``: Run the release configuration of the console app by navigating to ``Debug | Start Without Debugging.``
+
 
 ---
-<a name="04.11"></a>
-### 4.11 - Question & Answer
+<a name="04.7"></a>
+### 4.7 - Writing Unit Tests
+* In the example we use XUnit, by creating an XUnit project (as CalculatorTests) and adding a reference to the project we are testing (i.e. Calculator).
+* A unit test consists of three parts:
+    * ``Arrange`` : This part decleares and instantiates variables for input/desired output. 
+    * ``Act`` : This part will execute the unit you are testing (i.e. the method which we are trying to test will get called).
+    * ``Assert`` : This will make an assertion that the method output is the desired output.
+
+
+---
+<a name="04.8"></a>
+### 4.8 - Throwing & Catching Exceptions and the Call Stack 
+* **Call Stack**
+    * The call stack is shown from the most recent function call, all the way up every function up until Main().
+    * If there is an exception thrown at the most recent function call, it goes up the call stack looking for a try-catch block to handle the exception.
+    * If there are no try-catch block then .NET outputs the exception and the call stack details.
+
+* **Rethrowing an Exception**
+    * To throw the caught exception with its original call stack, call ``throw``.
+    * To rethrow the caught exception as though it was at the current level of the stack use ``throw ex``. This is poor practice because you lose information for debugging.
+    * To wrap the current exception into another exception that includes more info (for the caller to understand the issue). In this case, you can use: ``innerException`` parameter.
+
+Examples:
+```C#
+    try
+    {
+    Gamma();
+    }
+        catch (IOException ex)
+    {
+        LogException(ex);
+
+        // throw the caught exception as if it happened here
+        // this will lose the original call stack
+        throw ex;
+
+        // rethrow the caught exception and retain its original call stack
+        throw;
+
+        // throw a new exception with the caught exception nested within it
+        throw new InvalidOperationException(
+        message: "Calculation had invalid values. See inner exception for why.",
+        innerException: ex);
+    }
+```
+
+---
+<a name="04.9"></a>
+### 4.9 - Question & Answer
 <br>
 
 <details>
@@ -295,7 +380,6 @@ The code for this tutorial can be found in ``code/Chapter04``
         z = z+10;
     }
     ```
-<br><br>
 </details>
 
 
@@ -306,6 +390,81 @@ The code for this tutorial can be found in ``code/Chapter04``
 * ``Modularity``: Similar to C#, we can break down large complex codes into reusable smaller pieces of code.
 * ``Immutability``: With functional languages, data values of variables inside a function cannot be changed instead the new data balue has to be created from existing ones. This reduces bugs.
 * ``Maintainability``: Code is cleaner and clearer.
+<br><br>
+</details>
+
+
+<details>
+<summary><b> 3. What does the C# keyword void mean?</b></summary>
+<br>
+
+* ``void`` means that the function/method does not return anything.
+<br><br>
+</details>
+
+
+<details>
+<summary><b> 4. In Visual Studio Code or Visual Studio, what is the difference between pressing F5, Ctrl or Cmd + F5, Shift + F5, and Ctrl or Cmd + Shift + F5?</b></summary>
+<br>
+
+* ``F5`` runs the code in debug mode.
+* ``Ctrl+F5`` runs the code without debug mode.
+* The same in VS with an additional ``Shift`` command.
+<br><br>
+</details>
+
+<details>
+<summary><b> 5. Where does the Trace.WriteLine method write its output to?</b></summary>
+<br>
+
+* ``Trace.WriteLine`` : Writes its output to the ``debug`` output during development and runtime.
+<br><br>
+</details>
+
+<details>
+<summary><b> 6. What are the five trace levels?</b></summary>
+<br>
+
+* Trace Error
+* Trace Warning
+* Trace Info
+* Trace Verbose
+<br><br>
+</details>
+
+<details>
+<summary><b> 6. What is the difference between the Debug and Trace classes?</b></summary>
+<br>
+
+* ``Trace`` : Used to log during development and runtime
+* ``Debug`` : Used only to log during development
+<br><br>
+</details>
+
+
+<details>
+<summary><b> 7. When writing a unit test, what are the three "A"s?</b></summary>
+<br>
+
+* Arrange, Act and Assert
+<br><br>
+</details>
+
+<details>
+<summary><b> 8. When writing a unit test using xUnit, what attribute must you decorate the test methods with?</b></summary>
+<br>
+
+```C#
+[Fact]
+```
+<br><br>
+</details>
+
+<details>
+<summary><b> 9. What statement should you use to rethrow a caught exception named ex without losing the stack trace?</b></summary>
+<br>
+
+* ``throw``
 <br><br>
 </details>
 
