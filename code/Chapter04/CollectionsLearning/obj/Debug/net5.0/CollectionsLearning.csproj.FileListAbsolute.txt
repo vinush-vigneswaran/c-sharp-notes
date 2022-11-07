@@ -1,0 +1,16 @@
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\bin\Debug\net5.0\CollectionsLearning.exe
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\bin\Debug\net5.0\CollectionsLearning.deps.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\bin\Debug\net5.0\CollectionsLearning.runtimeconfig.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\bin\Debug\net5.0\CollectionsLearning.runtimeconfig.dev.json
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\bin\Debug\net5.0\CollectionsLearning.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\bin\Debug\net5.0\CollectionsLearning.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\obj\Debug\net5.0\CollectionsLearning.csproj.AssemblyReference.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\obj\Debug\net5.0\CollectionsLearning.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\obj\Debug\net5.0\CollectionsLearning.AssemblyInfoInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\obj\Debug\net5.0\CollectionsLearning.AssemblyInfo.cs
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\obj\Debug\net5.0\CollectionsLearning.csproj.CoreCompileInputs.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\obj\Debug\net5.0\CollectionsLearning.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\obj\Debug\net5.0\refint\CollectionsLearning.dll
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\obj\Debug\net5.0\CollectionsLearning.pdb
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\obj\Debug\net5.0\CollectionsLearning.genruntimeconfig.cache
+C:\Users\VINUS\Documents\35_CSHARP\c-sharp-notes\code\Chapter04\CollectionsLearning\obj\Debug\net5.0\ref\CollectionsLearning.dll

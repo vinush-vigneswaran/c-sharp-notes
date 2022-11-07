@@ -7,6 +7,7 @@ Return [Home](README.md)
 * [4.2 - Factorials with Recursion](#04.2)
 * [4.3 - XML Comments](#04.3)
 * [4.4 - Lambdas: Imperative vs Declarative](#04.4)
+* [4.5 - Debugging during Development](#04.5)
 
 
 * [4.15 - Question & Answer](#04.11)
@@ -32,10 +33,9 @@ The code for this tutorial can be found in ``code/Chapter04``
         {
             for (int x = 1; x <= 12; x++) 
             { 
-            WriteLine($"{xVal} x {x} = {x * xVal}");
+            WriteLine($"{xVal} x {x} = {x * xVal}\n");
             }
             
-            string xValString = xVal.ToString();
         }
     }
     ```
@@ -49,8 +49,7 @@ The code for this tutorial can be found in ``code/Chapter04``
             decimal taxToPay = CalculateTax(amount: 1000, twoLetterRegionCode: "GB");
             WriteLine($"You must pay {taxToPay} in tax.");
         }
-        static decimal CalculateTax(
-        decimal amount, string twoLetterRegionCode)
+        static decimal CalculateTax(decimal amount, string twoLetterRegionCode)
         {
             decimal rate = 0.0M;
             switch (twoLetterRegionCode)
@@ -249,7 +248,7 @@ The code for this tutorial can be found in ``code/Chapter04``
 
 ---
 <a name="04.5"></a>
-### 4.5 - Debugging during development
+### 4.5 - Debugging during Development
 * Breakpoints allow us to mark a line of code that we would like to pause at to inspect the program state and find bugs.
 * Debug Environment:
 1. Set a ``breakpoint`` by either **Debug | Toggle Breakpoint** or ``press F9`` or move to the left margin of that line to set a red circle.
@@ -264,8 +263,19 @@ The code for this tutorial can be found in ``code/Chapter04``
 * This is the toolbar labels:
     * ``continue``: This button will continue running the program from the current position until it ends or hits another breakpoint.
     * ``watch 1``: Shows the value of variables and expressions that you manually enter.
-    * 
+    * ``call stack``:  Shows the stack of function calls.
+    * ``breakpoints``: Shows all your breakpoints and allows finer control over them.
 > ![toolbar](media/toolbar.png)
+* ``step into`` vs ``step over``:
+    * When pressing these buttons in debug, you will not see any difference when its on statements.
+    * But when you are about to execute a method call, then ``step into`` will let you run through every line in that method. Whereas, ``step over`` executes the method in one go 
+    * IMPORTANT: The method is still EXECUTED during ``step over``, just not line by line, as in ``step into``. 
+* ``watch``
+    * You can hover over a variable used in the arguments of a function call to see what its current value is, e.g. hovering over ``a`` in: ``CustomeAddFunction(a, b)``.
+    * You can add an expression to ``watch`` to track the output of that expression by:
+
+    > highlighting > right-clicking > select "add to watch"
+
 
 
 

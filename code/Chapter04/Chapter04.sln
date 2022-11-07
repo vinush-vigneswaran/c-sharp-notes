@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cardinal2OrdinalApp", "Card
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factorial", "Factorial\Factorial.csproj", "{0B2DEF4F-3899-4E9D-A628-2E970BA5A240}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImperativeVsDeclarative", "ImperativeVsDeclarative\ImperativeVsDeclarative.csproj", "{7772CC54-9DEE-4640-BC9E-5F88B65B1F47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImperativeVsDeclarative", "ImperativeVsDeclarative\ImperativeVsDeclarative.csproj", "{7772CC54-9DEE-4640-BC9E-5F88B65B1F47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExploringDebugging", "ExploringDebugging\ExploringDebugging.csproj", "{5BF0A19B-2435-4EB0-A765-7258E779FE86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExploringDebugging", "ExploringDebugging\ExploringDebugging.csproj", "{5BF0A19B-2435-4EB0-A765-7258E779FE86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectionsLearning", "CollectionsLearning\CollectionsLearning.csproj", "{67A56DB1-A0D1-4C82-B928-25688F78579F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{5BF0A19B-2435-4EB0-A765-7258E779FE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BF0A19B-2435-4EB0-A765-7258E779FE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BF0A19B-2435-4EB0-A765-7258E779FE86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67A56DB1-A0D1-4C82-B928-25688F78579F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67A56DB1-A0D1-4C82-B928-25688F78579F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67A56DB1-A0D1-4C82-B928-25688F78579F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67A56DB1-A0D1-4C82-B928-25688F78579F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

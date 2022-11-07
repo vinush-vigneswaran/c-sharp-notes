@@ -12,11 +12,18 @@ Notes on C# and .NET from "C# 10 and .NET 6" textbook by Mark J. Price
 * [Ch4 - Writing, Debugging, and Testing Functions](Chapter4.md)
 * [ChX - Key Definitions](Keywords.md)
 
+### Related Topics
+* [Collections (C#)](topics/collections.md)
+* [Collections and Data Structures]
+* [Polymorphism]
+* [Delegates and Lambdas]
+* [FreeRTOS fundamentals]
+
 ---
 <a name="01"></a>
 ### Getting Started Quickly
 
-If you want to just mess around with code staight away without downloading software, then use this link: https://dotnetfiddle.net/.
+If you want to just mess around with code straight away without downloading software, then use this link: https://dotnetfiddle.net/.
 
 ### Downloading Microsoft Visual Studio 2022 for Windows
 
